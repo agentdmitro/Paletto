@@ -1,0 +1,28 @@
+<section class="best" id="best">
+    <div class="container">
+        <div class="best__header">
+            <div class="best__header-wrap">
+                <h5 class="best__header-title">
+                    Наші продукти
+                </h5>
+                <div class="best__header-list">
+                    <a href="#">Веганські, </a>
+                    <a href="#">Без жортскості, </a>
+                    <a href="#">Вироблені у Франції </a>
+                </div>
+            </div>
+        </div>
+        <h1 class="title--big">Бестселери</h1>
+        <div class="best__wrap products__wrap products__wrap-main">
+            <!-- prettier-ignore -->
+            @@include('./product/item.html', {"img": "0", "title": "title" , "price": "from 29,50 €"})
+            @@include('./product/item.html', {"img": "1", "title": "title 2" , "price": "from 29,50 €"})
+            @@include('./product/item.html', {"img": "2", "title": "title 3" , "price": "from 29,50 €"})
+            @@include('./product/item.html', {"img": "3", "title": "title 4" , "price": "from 29,50 €"})
+            @@include('./product/item.html', {"img": "4", "title": "title 5" , "price": "from 29,50 €"})
+        </div>
+        <a href="#" class="products__more">
+            Переглянути всі
+        </a>
+    </div>
+</section>

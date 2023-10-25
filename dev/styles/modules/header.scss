@@ -1,0 +1,285 @@
+@import '../core';
+
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 1rem 0;
+    top: 7rem;
+    z-index: 99;
+    transition: background 0.3s linear;
+
+    @include maxw($tablet) {
+        background: $white;
+        top: 0;
+        display: block;
+        position: static;
+        padding: 0.8rem 0;
+    }
+
+    &--scrolled {
+        top: 0;
+        -webkit-backdrop-filter: blur(4rem);
+        backdrop-filter: blur(4rem);
+        position: fixed;
+        background: $white;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 100%;
+        padding: 0 4rem;
+        @include maxw($tablet) {
+            padding: 0 2.5rem;
+        }
+        @include maxw(320px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    &__logo {
+        z-index: 1;
+        transition: 0.5s linear;
+        text-align: center;
+        flex: 1 1 16%;
+        @include maxw($tablet) {
+            img {
+                width: 13rem;
+                height: auto;
+            }
+        }
+    }
+    nav {
+        flex: 1 1 33%;
+        @include maxw($tablet) {
+            flex: unset;
+        }
+    }
+
+    &__menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: $black;
+        z-index: 10;
+        transform: translateX(-100%);
+        transition: transform 0.3s linear;
+        padding: 9rem 1.5rem 0;
+        overflow: auto;
+        @include minw($tablet) {
+            transform: unset;
+            width: auto;
+            height: auto;
+            position: static;
+            padding: 0;
+            background-color: transparent;
+            overflow: visible;
+        }
+    }
+
+    &__menu {
+        ul {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            @include maxw($tablet) {
+                flex-direction: column;
+            }
+
+            li {
+                a {
+                    display: inline-flex;
+                    gap: 1.2rem;
+                    text-align: center;
+                    text-decoration: none;
+                    color: #000;
+                    font-size: 1.3rem;
+                    text-transform: uppercase;
+                    transition: all 0.2s ease;
+                    @include maxw($tablet) {
+                        gap: 0;
+                        color: $white;
+                    }
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -0.2rem;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background: $black;
+                        height: 1px;
+                        width: 0;
+                        transition: all 0.2s ease;
+                    }
+                    &:hover {
+                        &::after {
+                            width: 80%;
+                        }
+                    }
+                }
+                @include maxw($tablet) {
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+                    a {
+                        width: 100%;
+                        justify-content: center;
+                        padding: 1rem 0;
+                        border-bottom: 1px solid $gray;
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+    &__search {
+        @include adaptiv-value('margin-right', 57, 13, 1);
+        @include maxw($tablet) {
+            display: none;
+        }
+    }
+    &__user {
+        text-align: right;
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 1.3rem;
+            @include maxw($tablet) {
+                gap: 2.4rem;
+            }
+            li {
+                a {
+                    display: flex;
+                    align-items: center;
+                    gap: 1.2rem;
+                    font-size: 1.3rem;
+                    font-weight: 400;
+                    line-height: 2.1rem;
+                    text-transform: uppercase;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -0.2rem;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background: $black;
+                        height: 1px;
+                        width: 0;
+                        transition: all 0.2s ease;
+                    }
+                    &:hover {
+                        &::after {
+                            width: 80%;
+                        }
+                    }
+                    span {
+                        @include maxw($tablet) {
+                            font-size: 0;
+                        }
+                    }
+                    @include maxw($tablet) {
+                        gap: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &__burger {
+        display: block;
+        width: 2rem;
+        height: 1.8rem;
+        z-index: 11;
+        @include minw($tablet) {
+            display: none;
+        }
+        &:before,
+        span,
+        &:after {
+            content: '';
+            position: absolute;
+            width: 2rem;
+            height: 0.2rem;
+            left: 50%;
+            background-color: $black;
+            transform: translateX(-50%);
+            transition: top 0.15s linear 0.15s, transform 0.15s linear, background 0.3s linear,
+                -webkit-transform 0.15s linear, opacity 0.3s linear;
+        }
+        span {
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &:before {
+            top: 0;
+        }
+        &:after {
+            top: 100%;
+            transform: translate(-50%, -100%);
+        }
+    }
+    &__col {
+        display: flex;
+        align-items: center;
+        gap: 2.4rem;
+        flex: 1 1 33%;
+        @include minw($tablet) {
+            display: none;
+        }
+        &-right {
+            justify-content: flex-end;
+        }
+        svg {
+            width: 2.1rem;
+            height: auto;
+        }
+    }
+}
+
+@include maxw($tablet) {
+    body.menu-open .header {
+        &__menu {
+            transform: translate3d(0, 0, 0);
+        }
+
+        &__burger {
+            span {
+                opacity: 0;
+            }
+            &::before,
+            &::after {
+                background: $white;
+                -webkit-transition: top 0.15s linear, background 0.3s linear,
+                    -webkit-transform 0.15s linear 0.15s;
+                transition: top 0.15s linear, background 0.3s linear,
+                    -webkit-transform 0.15s linear 0.15s;
+                -o-transition: top 0.15s linear, transform 0.15s linear 0.15s,
+                    background 0.3s linear;
+                transition: top 0.15s linear, transform 0.15s linear 0.15s, background 0.3s linear;
+                transition: top 0.15s linear, transform 0.15s linear 0.15s, background 0.3s linear,
+                    -webkit-transform 0.15s linear 0.15s;
+            }
+
+            &:before {
+                top: 50%;
+                -webkit-transform: translate(-50%, -50%) rotate(45deg);
+                -ms-transform: translate(-50%, -50%) rotate(45deg);
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+
+            &:after {
+                top: 50%;
+                -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+                -ms-transform: translate(-50%, -50%) rotate(-45deg);
+                transform: translate(-50%, -50%) rotate(-45deg);
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+@import 'core';
+
+@import 'partials/fonts';
+@import 'partials/base';
+@import 'partials/typography';
+@import 'partials/bttns';
+
+// Header
+@import 'modules/notif';
+@import 'modules/header';
+
+// Components. Sections
+@import 'modules/banner';
+@import 'modules/best';
+@import 'modules/find';
+@import 'modules/offer';
+@import 'modules/diagnosis';
+@import 'modules/new';
+
+@import 'modules/products';
+
+// FOOTER
+@import 'modules/footer';
+
+// Example
+@import 'modules/video';
+@import 'modules/anchor';
+@import 'modules/tabs';
+@import 'modules/popup';
+@import 'modules/slider';

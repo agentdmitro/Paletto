@@ -1,0 +1,89 @@
+@import '../core';
+
+.banner {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    max-height: 97rem;
+    @include maxw($mob) {
+        height: 43rem;
+        padding-top: 2.7rem;
+        padding-bottom: 0;
+    }
+    @include minw($sm-pc) {
+        min-height: 96.4rem;
+    }
+    &__wrap {
+        height: 100%;
+        p {
+            font-size: 1.8rem;
+            line-height: 2.5rem;
+            text-transform: uppercase;
+            @include maxw($mob) {
+                font-size: 1.4rem;
+                line-height: 1.75rem;
+                margin-top: 0.7rem;
+            }
+        }
+    }
+    &-slider {
+        height: 100%;
+        width: 100%;
+        .swiper-wrapper {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &-pagination {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        right: 6.1rem;
+        bottom: 3rem;
+        transition: all 0.2s ease;
+        span {
+            cursor: pointer;
+            color: $grayDark;
+            opacity: 1;
+            font-size: 1.3rem;
+            transition: all 0.2s ease;
+            &.swiper-pagination-bullet-active {
+                color: $gray;
+            }
+            &:not(.swiper-pagination-bullet-active):hover {
+                color: $gray;
+            }
+        }
+        @include maxw($mob) {
+            right: unset;
+            left: 50%;
+            transform: translateX(-50%);
+            justify-content: center;
+        }
+    }
+    &__slide {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        @include maxw($mob) {
+            align-items: start;
+            text-align: center;
+        }
+    }
+    &__bg {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include maxw($mob) {
+            background-position: 50% 0;
+        }
+    }
+}

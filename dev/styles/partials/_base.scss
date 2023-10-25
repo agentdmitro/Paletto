@@ -1,0 +1,219 @@
+@import '../core';
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    // Set global fonts here
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img,
+svg {
+    vertical-align: top;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: inherit;
+}
+
+* {
+    position: relative;
+}
+
+html {
+    font-size: 10px;
+    background-color: $bgColor;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Product Sans Infanity', sans-serif;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: $black;
+
+    &.menu-open {
+        overflow: hidden;
+        height: 100vh;
+    }
+
+    &.scroll-disable {
+        height: 100vh;
+        overflow: hidden;
+    }
+}
+
+section {
+    overflow: hidden;
+    padding: 7.2rem 0;
+    @include maxw($tablet) {
+        padding: 3rem 0;
+    }
+}
+
+main {
+    flex: 1;
+}
+
+//===========================
+// Helpers
+//===========================
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    max-width: rem($maxWidthContainer);
+    padding: 0 rem(calc($containerPadding/2));
+}
+
+.tac {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+//===========================
+// Grids
+//===========================
+
+[class*='grid'] + [class*='grid'] {
+    margin-top: rem($gridPadding);
+}
+
+.grid-2,
+.grid-3,
+.grid-4 {
+    grid-gap: 2rem;
+    & > div,
+    & > a {
+        @include minw($gridMinSize + px) {
+            width: calc(50% - rem(calc($gridPadding/2)));
+        }
+    }
+
+    @include minw($gridMinSize + px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+@include minw($sm-pc) {
+    .grid-3,
+    .grid-4 {
+        justify-content: flex-start;
+
+        & > div,
+        & > a {
+            width: calc(33.33% - rem(calc($gridPadding/1.5)));
+        }
+    }
+}
+
+@include minw($pc) {
+    .grid-4 {
+        & > div,
+        & > a {
+            width: calc(25% - rem(calc($gridPadding/1.3333333333)));
+        }
+    }
+}
+
+.spacer {
+    height: 1rem;
+    display: block;
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+    &:before,
+    &:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: var(--bg-image) no-repeat center center;
+        position: absolute;
+        background-size: cover;
+    }
+
+    &:before {
+        filter: blur(3rem);
+        transform: scale(1.15);
+    }
+
+    &:after {
+        max-width: 192rem;
+    }
+
+    div {
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: rgba(0, 0, 0, 0.4);
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.5) 100%);
+    }
+
+    &-top {
+        &:before,
+        &:after {
+            background-position: top center;
+        }
+    }
+
+    &-bottom {
+        &:before,
+        &:after {
+            background-position: bottom center;
+        }
+    }
+}
+.flex-2 {
+    display: flex;
+    flex-direction: column;
+    @include minw($sm-pc) {
+        flex-direction: row;
+        & > div {
+            flex: 1;
+        }
+    }
+}
+
+.text {
+    p {
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        font-weight: 400;
+        + p {
+            margin-top: 3.4rem;
+            @include maxw($tablet) {
+                margin-top: 2rem;
+            }
+        }
+    }
+}

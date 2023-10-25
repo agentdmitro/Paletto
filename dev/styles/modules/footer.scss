@@ -1,0 +1,167 @@
+@import '../core';
+
+.footer {
+    background-color: $white;
+    padding: 8rem 0 4rem;
+    color: $black;
+    @include maxw($tablet) {
+        padding-top: 4rem;
+        padding-bottom: 2rem;
+    }
+    h6 {
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        line-height: 175%;
+    }
+    &__title {
+        font-size: 3.1rem;
+        line-height: 137%;
+        width: 102rem;
+        max-width: 100%;
+        @include maxw($mob) {
+            font-size: 2.4rem;
+            line-height: 125%;
+            width: 100%;
+        }
+    }
+    &__user {
+        margin-top: 9rem;
+        display: flex;
+        justify-content: space-between;
+        gap: 5rem;
+        @include maxw($tablet) {
+            margin-top: 4rem;
+            gap: 5rem;
+            flex-direction: column;
+        }
+    }
+    &__form {
+        width: 27rem;
+        max-width: 100%;
+        @include maxw($tablet) {
+            margin: 0 auto;
+        }
+        form {
+            margin-top: 2.8rem;
+            button {
+                position: absolute;
+                right: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 2rem;
+                transition: all 0.2s ease;
+                &:hover {
+                    transform: translateX(0.4rem) translateY(-50%);
+                }
+            }
+            input {
+                text-transform: uppercase;
+            }
+        }
+        p {
+            font-size: 0.9rem;
+            line-height: 166%;
+            margin-top: 2.5rem;
+            text-transform: uppercase;
+        }
+    }
+    &__menu {
+        display: flex;
+        gap: 5rem;
+        @include maxw($tablet) {
+            width: 27rem;
+            max-width: 100%;
+            margin: 0 auto;
+            flex-direction: column;
+        }
+        &-item {
+            ul {
+                margin-top: 2rem;
+                li {
+                    + li {
+                        margin-top: 1rem;
+                    }
+                    a {
+                        font-size: 1.3rem;
+                        line-height: 150%;
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            bottom: -0.2rem;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            background: $black;
+                            height: 1px;
+                            width: 0;
+                            transition: all 0.2s ease;
+                        }
+                        &:hover {
+                            &::after {
+                                width: 80%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &-info {
+            ul {
+                li {
+                    + li {
+                        margin-top: 3rem;
+                    }
+                    h6 {
+                        display: flex;
+                        align-items: center;
+                        gap: 1.6rem;
+                    }
+                }
+            }
+        }
+    }
+    &__info {
+        margin-top: 8rem;
+        padding-top: 3.7rem;
+        border-top: 1px solid $grayDark;
+        text-align: center;
+        @include maxw($mob) {
+            margin-top: 2rem;
+        }
+        p {
+            font-size: 1.4rem;
+            line-height: 170%;
+            + p {
+                margin-top: 1rem;
+            }
+        }
+        a {
+            font-size: 1.3rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            text-transform: uppercase;
+            margin-top: 2.8rem;
+            justify-content: center;
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -0.2rem;
+                left: 50%;
+                transform: translateX(-50%);
+                background: $black;
+                height: 1px;
+                width: 0;
+                transition: all 0.2s ease;
+            }
+            &:hover {
+                &::after {
+                    width: 80%;
+                }
+            }
+        }
+    }
+}

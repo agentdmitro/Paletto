@@ -1,0 +1,25 @@
+@import '../core';
+
+.bttn {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 1.9rem 7.3rem;
+    letter-spacing: 0.07rem;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    border: none;
+    cursor: pointer;
+    background: $black;
+    border: 1px solid $black;
+    text-align: center;
+    &--width {
+        width: 32rem;
+        @include maxw($mob) {
+            width: 100%;
+            font-size: 1.4rem;
+        }
+    }
+}

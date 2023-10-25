@@ -1,0 +1,35 @@
+.notif {
+  text-align: center;
+  background: #050505;
+  padding: 0.6rem 0;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+.notif a {
+  text-decoration: underline;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  font-weight: 400;
+  transition: all 0.2s ease;
+}
+@media only screen and (max-width: 576px) {
+  .notif a {
+    display: flex;
+  }
+}
+.notif a:hover {
+  color: #4b4a49;
+}
+@media only screen and (max-width: 576px) {
+  .notif {
+    text-align: left;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .notif {
+    height: auto;
+  }
+}

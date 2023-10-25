@@ -1,0 +1,51 @@
+@import '../core';
+
+.best {
+    padding-bottom: 16rem;
+    @include maxw($tablet) {
+        padding-bottom: 9.5rem;
+    }
+    &__header {
+        padding-bottom: 5.5rem;
+        border-bottom: 1px solid $gray;
+        @include maxw($tablet) {
+            padding-bottom: 2rem;
+        }
+        &-title {
+            color: $gray;
+            float: left;
+            margin-right: 3rem;
+        }
+        &-wrap {
+            a {
+                font-size: 2rem;
+                line-height: 3.5rem;
+                white-space: nowrap;
+                @include minw($mob) {
+                    font-size: calc(2rem + 4 * (100vw - 375px) / 625);
+                }
+                @include minw($sm-pc) {
+                    font-size: 2.5rem;
+                }
+                transition: all 0.2s ease;
+                display: inline-flex;
+                position: relative;
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+    h1 {
+        margin-top: 5.5rem;
+        @include maxw($tablet) {
+            margin-top: 2rem;
+        }
+    }
+    &__wrap {
+        margin-top: 4rem;
+        @include maxw($tablet) {
+            margin-top: 0;
+        }
+    }
+}
