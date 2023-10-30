@@ -1,0 +1,48 @@
+@import '../core';
+
+.related {
+    padding: 7.2rem 0;
+    background: $white;
+    @include maxw($tablet) {
+        padding: 3.2rem 0;
+    }
+    &__slider {
+        padding: 0 4.8rem;
+        margin-top: 4rem;
+        @include maxw($tablet) {
+            margin-top: 2rem;
+        }
+    }
+    h2 {
+        @include maxw($tablet) {
+            font-size: 3.4rem;
+        }
+    }
+    &__slide {
+        width: 27.1rem;
+        @include maxw($mob) {
+            width: 23.2rem;
+        }
+    }
+    .swiper-button-prev {
+        justify-content: start;
+    }
+    .swiper-button-next {
+        justify-content: flex-end;
+    }
+    .swiper-button-prev:hover,
+    .swiper-button-next:hover {
+        box-shadow: none;
+    }
+    @include maxw($tablet) {
+        .swiper-button-prev,
+        .swiper-button-next {
+            display: none;
+        }
+        &__slider {
+            padding-left: 0;
+            padding-right: -1.5rem;
+            margin-right: -1.5rem;
+        }
+    }
+}

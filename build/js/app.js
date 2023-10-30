@@ -26,7 +26,7 @@ import './modules/popup.js';
 // ВІДЕО
 import './modules/video.js';
 
-// ANIMATIONS
+// ANIMATIONS	
 import './modules/anim.js';
 
 
@@ -36,6 +36,19 @@ $(document).ready(function() {
 			$(this).find('select').niceSelect()
 		})
 	}
+	if ($('.faq__content-header')) {
+		$('.faq__content-header').click(function (e) {
+		  $(this).toggleClass('active');
+		  $(this).next('.faq__content-info').slideToggle();
+		});
+	}
+	if ($('.faq__header')) {
+		$('.faq__header').click(function (e) {
+		  $(this).toggleClass('active');
+		  $(this).next('.faq__content').slideToggle();
+		  $(this).next('.faq__content').css('display','flex');
+		});
+	  }
 });
 
 // Динамический адаптив

@@ -8,7 +8,9 @@
     top: 7rem;
     z-index: 99;
     transition: background 0.3s linear;
-
+    &-product {
+        position: sticky;
+    }
     @include maxw($tablet) {
         background: $white;
         top: 0;

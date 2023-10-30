@@ -216,3 +216,67 @@ ScrollTrigger.create({
     toggleActions: 'play none none none',
     once: true,
 });
+
+
+
+// PRODUCT FAQ  
+
+// const anim4 = gsap.fromTo(
+//     $('.product__faq'),
+//     { autoAlpha: 0, y: 50 },
+//     { duration: 0.4, autoAlpha: 1, y: 0, ease: 'ease', delay: 0.4 },
+// );
+// ScrollTrigger.create({
+//     trigger: $('.product__faq-item'),
+//     animation: anim4,
+//     toggleActions: 'play none none none',
+//     once: true,
+// });
+
+
+var faqItemsTranslate = [];
+
+translateElem($('.product__info-header'), 0, 50, 0);
+$('.product__faq-item').each(function (index, item) {
+    translateElem(item, 0, 150, index);
+    faqItemsTranslate[index] = 100 * (index + 1);
+});
+
+var offerOneScene = new ScrollMagic.Scene({
+    triggerElement: '.product__info',
+    triggerHook: .7,
+    duration: window.innerHeight / 2,
+})
+    .on('progress', function (event) {
+        gsap.to($('.product__info-header'), {
+            y: 50 - 50 * event.progress,
+        });
+        $('.product__faq-item').each(function (index, item) {
+            gsap.to($(item), {
+                y: faqItemsTranslate[index] - faqItemsTranslate[index] * event.progress,
+            });
+        });
+    })
+    .addTo(controller);
+
+
+
+// Product Related
+
+translateElem($('.related h2'), 0, 50, 0);
+translateElem($('.related__wrap'), 0, 100, 0);
+
+var offerOneScene = new ScrollMagic.Scene({
+    triggerElement: '.related',
+    triggerHook: 0.8,
+    duration: window.innerHeight / 2,
+})
+    .on('progress', function (event) {
+        gsap.to($('.related h2'), {
+            y: 50 - 50 * event.progress,
+        });
+        gsap.to($('.related__wrap'), {
+            y: 100 - 100 * event.progress,
+        });
+    })
+    .addTo(controller);

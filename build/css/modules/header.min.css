@@ -7,6 +7,9 @@
   z-index: 99;
   transition: background 0.3s linear;
 }
+.header-product {
+  position: sticky;
+}
 @media only screen and (max-width: 768px) {
   .header {
     background: #ffffff;

@@ -15,11 +15,70 @@
     background: $black;
     border: 1px solid $black;
     text-align: center;
+    transition: all 0.3s linear;
+    &:hover {
+        color: $black;
+        background: $white;
+        svg,
+        path {
+            fill: $black;
+        }
+    }
     &--width {
         width: 32rem;
         @include maxw($mob) {
             width: 100%;
             font-size: 1.4rem;
         }
+    }
+    &--white {
+        padding: 2.2rem;
+        width: 100%;
+        border-color: $grayDark;
+        background-color: inherit;
+        color: $black;
+        &:hover {
+            color: $white;
+            background-color: $black;
+        }
+    }
+    &--marquee {
+        padding-left: 0;
+        max-width: 100%;
+        width: 47rem;
+        padding-right: 0;
+        overflow-x: hidden;
+        .marquee {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        .marquee {
+        }
+        span {
+            display: flex;
+            align-items: center;
+            gap: 1.7rem;
+            text-transform: uppercase;
+            font-size: 1.4rem;
+            white-space: nowrap;
+            will-change: transform;
+            animation: 12s linear infinite marq;
+        }
+    }
+    svg,
+    path,
+    img {
+        transition: all 0.3s linear;
+    }
+}
+
+@keyframes marq {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(100%, 0);
     }
 }

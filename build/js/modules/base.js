@@ -26,13 +26,25 @@ $(document).scroll(() => {
   if (mobile.matches) {
     if (window.scrollY > $('.banner').outerHeight(true)) {
       $('header').addClass('header--scrolled');
-    } else {
+    }else if($('.banner').length == 0){
+      if(window.scrollY > 150){
+        $('header').addClass('header--scrolled');
+      }else{
+      $('header').removeClass('header--scrolled');
+      }
+    }else {
       $('header').removeClass('header--scrolled');
     }
   } else {
     if (window.scrollY > $('.banner').outerHeight(true)) {
       $('header').addClass('header--scrolled');
-    } else {
+    }else if($('.banner').length == 0){
+      if(window.scrollY > 150){
+        $('header').addClass('header--scrolled');
+      }else{
+      $('header').removeClass('header--scrolled');
+      }
+    }else {
       $('header').removeClass('header--scrolled');
     }
   }

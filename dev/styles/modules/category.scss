@@ -1,0 +1,67 @@
+@import '../core';
+
+.category {
+    &__products {
+        padding-top: 0;
+    }
+    &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3.8rem 4.4rem;
+        margin-top: 2rem;
+        @include maxw($xl-tablet) {
+            gap: 2.4rem 2rem;
+        }
+        .product__item {
+            width: calc(25% - 3.3rem);
+            img {
+                min-height: 34rem;
+            }
+            @include maxw($xl-tablet) {
+                width: calc(33% - 2rem);
+            }
+            @include maxw($mob) {
+                width: calc(50% - 2rem);
+                img {
+                    min-height: 28rem;
+                }
+            }
+        }
+    }
+    &__blog {
+        height: max-content;
+        overflow: $hoverColor;
+        &-img {
+            overflow: hidden;
+        }
+        img {
+            transition: all 0.2s ease;
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        &:hover {
+            img {
+                transform: scale(1.05);
+            }
+            .products__more {
+                &::before {
+                    transform: translateX(2px);
+                }
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+        &-content {
+            position: absolute;
+            left: 4rem;
+            bottom: 4rem;
+            .products__more {
+                margin-left: 0;
+                margin-top: 0.6rem;
+            }
+        }
+    }
+}

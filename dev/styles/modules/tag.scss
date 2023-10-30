@@ -1,0 +1,30 @@
+@import '../core';
+
+.tag {
+    &__header {
+        &-title {
+            color: $gray;
+            float: left;
+            margin-right: 3rem;
+        }
+        &-wrap {
+            a {
+                font-size: 2rem;
+                line-height: 3.5rem;
+                white-space: nowrap;
+                @include minw($mob) {
+                    font-size: calc(2rem + 4 * (100vw - 375px) / 625);
+                }
+                @include minw($sm-pc) {
+                    font-size: 2.5rem;
+                }
+                transition: all 0.2s ease;
+                display: inline-flex;
+                position: relative;
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}
