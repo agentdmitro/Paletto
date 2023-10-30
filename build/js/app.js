@@ -29,6 +29,7 @@ import './modules/video.js';
 // ANIMATIONS	
 import './modules/anim.js';
 
+var anyHover = window.matchMedia('(any-hover: hover)');
 
 $(document).ready(function() {
 	if($('.find__select')){
@@ -49,6 +50,26 @@ $(document).ready(function() {
 		  $(this).next('.faq__content').css('display','flex');
 		});
 	  }
+	if($('.menu__list')){
+		if(anyHover.matches){
+			$('.menu__list li').mouseover(function(e, index){
+				$('.menu__list li a').removeClass('active')
+				$(this).find('a').addClass('active')
+				$('.menu__items').hide()
+				$('.menu__items').eq($(this).index()).show()
+			})
+		}else{
+			$('.menu__list > ul > li').click(function (e) {
+				$(this).toggleClass('active');
+				$('.menu__item-list').eq($(this).index()).slideToggle()
+			  });
+		}
+	}
+	if($('.search__remove')){
+		$('.search__remove').click(()=>{
+			$('#search__input').val("");
+		})
+	}
 });
 
 // Динамический адаптив

@@ -1929,6 +1929,228 @@ input {
   margin-top: 0.6rem;
 }
 
+.menu {
+  padding-top: 0;
+  width: 100%;
+  background: #fbf9f7;
+  margin-top: 7.6rem;
+  border-top: 0.25px solid #909090;
+  padding-bottom: 0;
+}
+@media only screen and (max-width: 768px) {
+  .menu {
+    margin-top: 0;
+  }
+}
+.menu .container {
+  height: auto;
+  min-height: 100%;
+  display: flex;
+  max-width: 100%;
+  padding: 0 4rem;
+}
+@media only screen and (max-width: 768px) {
+  .menu .container {
+    padding: 0 2.5rem;
+  }
+}
+@media (any-hover: hover) {
+  .menu__items {
+    padding-left: 8rem;
+    flex: 1;
+    padding-top: 6rem;
+    padding-bottom: 7rem;
+    display: none;
+  }
+  .menu__items ul li a {
+    padding: 1rem 0;
+    font-size: 2.4rem;
+    line-height: 130%;
+    text-transform: capitalize;
+    display: flex;
+  }
+  .menu__items.active {
+    display: flex;
+  }
+  .menu__list {
+    width: 35.5rem;
+    max-width: 100%;
+    border-right: 0.25px solid #909090;
+    padding-top: 6rem;
+  }
+  .menu__list ul li a {
+    padding: 2rem 0;
+    display: flex;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    color: #909090;
+    transition: all 0.2s ease;
+  }
+  .menu__list ul li a:hover {
+    color: #050505;
+  }
+  .menu__list ul li a.active {
+    color: #050505;
+  }
+}
+@media (any-hover: none) {
+  .menu__list {
+    width: 100%;
+  }
+  .menu__list > ul > li {
+    padding: 2rem;
+  }
+  .menu__list > ul > li {
+    border-top: 1px solid #f4f4f2;
+  }
+  .menu__list > ul > li > a {
+    pointer-events: none;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .menu__list > ul > li > a::after {
+    content: "";
+    background-image: url(../img/icons/plus.svg);
+    width: 2.4rem;
+    height: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.2s ease;
+  }
+  .menu__list > ul > li > ul {
+    padding-top: 2rem;
+    display: none;
+  }
+  .menu__list > ul > li > ul a {
+    padding: 1rem 0;
+    display: flex;
+    font-size: 1.4rem;
+    color: #909090;
+  }
+  .menu__list > ul > li.active > a::after {
+    transform: rotate(45deg);
+  }
+  .menu__items {
+    display: none;
+  }
+}
+
+.search__header {
+  padding: 2.4rem 0;
+  border-bottom: 1px solid #cecdc9;
+}
+@media only screen and (max-width: 768px) {
+  .search__header {
+    padding: 0;
+  }
+  .search__header .container {
+    padding: 0;
+  }
+}
+.search__header input {
+  padding: 2rem 4.8rem;
+  padding-right: 9.6rem;
+  font-size: 3.4rem;
+  border: none;
+}
+.search__header input::placeholder {
+  font-size: 3.4rem;
+  color: #a0aec0;
+}
+@media only screen and (max-width: 768px) {
+  .search__header input {
+    padding-left: 2rem;
+    padding-right: 5.2rem;
+  }
+}
+.search__remove {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 3.4rem;
+  height: 6rem;
+  width: 6rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media only screen and (max-width: 768px) {
+  .search__remove {
+    right: 0rem;
+  }
+}
+.search__wrap + h4 {
+  margin-top: 3.2rem;
+}
+@media only screen and (max-width: 768px) {
+  .search__wrap + h4 {
+    margin-top: 2rem;
+  }
+}
+.search h4 {
+  padding-left: 4.8rem;
+}
+@media only screen and (max-width: 768px) {
+  .search h4 {
+    padding: 0;
+  }
+}
+.search__slider {
+  padding: 0 4.8rem;
+}
+.search__slide {
+  max-width: 17.7rem;
+}
+.search .swiper-button-prev {
+  justify-content: start;
+}
+.search .swiper-button-next {
+  justify-content: flex-end;
+}
+.search .swiper-button-prev:hover,
+.search .swiper-button-next:hover {
+  box-shadow: none;
+}
+.search .swiper-button-prev,
+.search .swiper-button-next {
+  width: 4.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  height: 100%;
+  border-radius: 0;
+}
+.search .swiper-button-prev:hover,
+.search .swiper-button-next:hover {
+  background: #d9d9d9;
+}
+.search .product__item img {
+  min-height: 22.1rem;
+}
+.search .product__item-img {
+  margin-bottom: 1.5rem;
+}
+@media only screen and (max-width: 768px) {
+  .search .swiper-button-prev,
+  .search .swiper-button-next {
+    display: none;
+  }
+  .search__slider {
+    padding-left: 0;
+    padding-right: -1.5rem;
+    margin-right: -1.5rem;
+  }
+}
+
 .footer {
   background-color: #ffffff;
   padding: 8rem 0 4rem;

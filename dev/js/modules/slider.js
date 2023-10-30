@@ -86,6 +86,26 @@ var productSlider = new Swiper(".related__slider", {
   },
 });
 
+
+var productSlider = new Swiper(".search__products-slider", {
+  slidesPerView: 'auto',
+  spaceBetween: 16,
+  navigation: {
+    nextEl: '.search-products-next',
+    prevEl: '.search-products-prev',
+  },
+});
+
+var productSlider = new Swiper(".search__posts-slider", {
+  slidesPerView: 'auto',
+  spaceBetween: 16,
+  navigation: {
+    nextEl: '.search-posts-next',
+    prevEl: '.search-posts-prev',
+  },
+});
+
+
 // $('.swiper-button-prev').remove();
 // $('.swiper-button-next').remove();
 

@@ -1,0 +1,123 @@
+@import '../core';
+
+.menu {
+    padding-top: 0;
+    width: 100%;
+    background: $bgColor;
+    margin-top: 7.6rem;
+    border-top: 0.25px solid $gray;
+    padding-bottom: 0;
+    @include maxw($tablet) {
+        margin-top: 0;
+    }
+    .container {
+        height: auto;
+        min-height: 100%;
+        display: flex;
+        max-width: 100%;
+        padding: 0 4rem;
+        @include maxw($tablet) {
+            padding: 0 2.5rem;
+        }
+    }
+    @media (any-hover: hover) {
+        &__items {
+            padding-left: 8rem;
+            flex: 1;
+            padding-top: 6rem;
+            padding-bottom: 7rem;
+            display: none;
+            ul {
+                li {
+                    a {
+                        padding: 1rem 0;
+                        font-size: 2.4rem;
+                        line-height: 130%;
+                        text-transform: capitalize;
+                        display: flex;
+                    }
+                }
+            }
+            &.active {
+                display: flex;
+            }
+        }
+        &__list {
+            width: 35.5rem;
+            max-width: 100%;
+            border-right: 0.25px solid $gray;
+            padding-top: 6rem;
+            ul {
+                li {
+                    a {
+                        padding: 2rem 0;
+                        display: flex;
+                        font-size: 2.4rem;
+                        text-transform: uppercase;
+                        color: $gray;
+                        transition: all 0.2s ease;
+                        &:hover {
+                            color: $black;
+                        }
+                        &.active {
+                            color: $black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (any-hover: none) {
+        &__list {
+            width: 100%;
+            & > ul {
+                & > li {
+                    padding: 2rem;
+                    + & {
+                        border-top: 1px solid #f4f4f2;
+                    }
+
+                    & > a {
+                        pointer-events: none;
+                        font-size: 1.6rem;
+                        text-transform: uppercase;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        gap: 2rem;
+                        &::after {
+                            content: '';
+                            background-image: url(../img/icons/plus.svg);
+                            width: 2.4rem;
+                            height: 2.4rem;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            transition: all 0.2s ease;
+                        }
+                    }
+                    & > ul {
+                        padding-top: 2rem;
+                        display: none;
+                        a {
+                            padding: 1rem 0;
+                            display: flex;
+                            font-size: 1.4rem;
+                            color: $gray;
+                        }
+                    }
+                    &.active {
+                        & > a::after {
+                            transform: rotate(45deg);
+                        }
+                    }
+                }
+            }
+        }
+        &__items {
+            display: none;
+        }
+    }
+}

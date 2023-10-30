@@ -9,14 +9,14 @@ let st = $(window).scrollTop(),
 
 window.st = st;
 
-// ANCHOR HEADER SCROLL LISTENER
+// ANCHOR .header SCROLL LISTENER
 // ==============================================
 var mobile = window.matchMedia('(min-width: 0px) and (max-width: 768px)');
 var tablet = window.matchMedia('(min-width: 769px) and (max-width: 1023px)');
 var desktop = window.matchMedia('(min-width: 1023px) and (max-width: 1279px)'); // Enable (for mobile)
 var desktop_pc = window.matchMedia('(min-width: 1280px)');
 
-// hide header if page was alredy scrolled after loading
+// hide .header if page was alredy scrolled after loading
 
 $(document).scroll(() => {
   st = $(window).scrollTop();
@@ -25,27 +25,27 @@ $(document).scroll(() => {
 
   if (mobile.matches) {
     if (window.scrollY > $('.banner').outerHeight(true)) {
-      $('header').addClass('header--scrolled');
+      $('.header').addClass('.header--scrolled');
     }else if($('.banner').length == 0){
-      if(window.scrollY > 150){
-        $('header').addClass('header--scrolled');
+      if(window.scrollY > 150 && window.location.pathname !== '/menu.html'){
+        $('.header').addClass('.header--scrolled');
       }else{
-      $('header').removeClass('header--scrolled');
+      $('.header').removeClass('.header--scrolled');
       }
     }else {
-      $('header').removeClass('header--scrolled');
+      $('.header').removeClass('.header--scrolled');
     }
   } else {
     if (window.scrollY > $('.banner').outerHeight(true)) {
-      $('header').addClass('header--scrolled');
+      $('.header').addClass('.header--scrolled');
     }else if($('.banner').length == 0){
-      if(window.scrollY > 150){
-        $('header').addClass('header--scrolled');
+      if(window.scrollY > 150 && window.location.pathname !== '/menu.html'){
+        $('.header').addClass('.header--scrolled');
       }else{
-      $('header').removeClass('header--scrolled');
+      $('.header').removeClass('.header--scrolled');
       }
     }else {
-      $('header').removeClass('header--scrolled');
+      $('.header').removeClass('.header--scrolled');
     }
   }
 

@@ -1,0 +1,106 @@
+@import '../core';
+
+.search {
+    &__header {
+        padding: 2.4rem 0;
+        border-bottom: 1px solid $grayDark;
+        @include maxw($tablet) {
+            padding: 0;
+            .container {
+                padding: 0;
+            }
+        }
+        input {
+            padding: 2rem 4.8rem;
+            padding-right: 9.6rem;
+            font-size: 3.4rem;
+            border: none;
+            &::placeholder {
+                font-size: 3.4rem;
+                color: #a0aec0;
+            }
+            @include maxw($tablet) {
+                padding-left: 2rem;
+                padding-right: 5.2rem;
+            }
+        }
+    }
+    &__remove {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 3.4rem;
+        height: 6rem;
+        width: 6rem;
+        top: 50%;
+        transform: translateY(-50%);
+        @include maxw($tablet) {
+            right: 0rem;
+        }
+    }
+    &__wrap {
+        + h4 {
+            margin-top: 3.2rem;
+            @include maxw($tablet) {
+                margin-top: 2rem;
+            }
+        }
+    }
+    h4 {
+        padding-left: 4.8rem;
+        @include maxw($tablet) {
+            padding: 0;
+        }
+    }
+    &__slider {
+        padding: 0 4.8rem;
+    }
+    &__slide {
+        max-width: 17.7rem;
+    }
+
+    .swiper-button-prev {
+        justify-content: start;
+    }
+    .swiper-button-next {
+        justify-content: flex-end;
+    }
+    .swiper-button-prev:hover,
+    .swiper-button-next:hover {
+        box-shadow: none;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 4.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: $white;
+        height: 100%;
+        border-radius: 0;
+        &:hover {
+            background: $grayLight;
+        }
+    }
+    .product__item {
+        img {
+            min-height: 22.1rem;
+        }
+        &-img {
+            margin-bottom: 1.5rem;
+        }
+    }
+    @include maxw($tablet) {
+        .swiper-button-prev,
+        .swiper-button-next {
+            display: none;
+        }
+        &__slider {
+            padding-left: 0;
+            padding-right: -1.5rem;
+            margin-right: -1.5rem;
+        }
+    }
+}
