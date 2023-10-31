@@ -37,6 +37,11 @@ $(document).ready(function() {
 			$(this).find('select').niceSelect()
 		})
 	}
+	if($('.cart__product-count')){
+		$('.cart__product-count').each(()=>{
+			$(this).find('select').niceSelect()
+		})
+	}
 	if ($('.faq__content-header')) {
 		$('.faq__content-header').click(function (e) {
 		  $(this).toggleClass('active');

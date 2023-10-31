@@ -46,7 +46,9 @@ body {
     flex-direction: column;
     min-height: 100vh;
     color: $black;
-
+    &.home {
+        background-color: $bgColor;
+    }
     &.menu-open {
         overflow: hidden;
         height: 100vh;
@@ -55,6 +57,10 @@ body {
     &.scroll-disable {
         height: 100vh;
         overflow: hidden;
+        .header {
+            top: 4rem;
+            background: $white;
+        }
     }
 }
 

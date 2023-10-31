@@ -1,0 +1,198 @@
+@import '../core';
+
+.cart {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    display: none;
+    &__bg {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+        background: rgba(0, 0, 0, 0.5);
+    }
+    &__wrap {
+        z-index: 6;
+        display: flex;
+        width: max-content;
+        margin-left: auto;
+        justify-content: flex-end;
+        height: 100%;
+        overflow: auto;
+        @include maxw($mob) {
+            width: 100%;
+            background: $white;
+            padding-bottom: 2rem;
+        }
+    }
+    &__sidebar {
+        min-width: 27%;
+        background: $white;
+        padding: 4rem 4rem 4rem 5.3rem;
+        display: flex;
+        flex-direction: column;
+        @include maxw($mob) {
+            padding-left: 2rem;
+            padding-right: 2rem;
+            width: 100%;
+            padding-top: 6.2rem;
+        }
+        h5 {
+            font-size: 2rem;
+            line-height: 150%;
+        }
+        &-wrap {
+            margin-top: 4.1rem;
+            display: flex;
+            flex-direction: column;
+
+            flex: 1;
+            overflow-y: auto;
+            overflow-x: hidden;
+            height: auto;
+            gap: 4rem;
+            margin-bottom: 3rem;
+            min-height: 15rem;
+            max-height: 42rem;
+        }
+    }
+    &__close {
+        width: 3.2rem;
+        height: 3.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        background: $black;
+        transition: all 0.2s ease;
+        border: 1px solid #00000000;
+        overflow: hidden;
+        @include maxw($mob) {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 6;
+        }
+        svg,
+        path {
+            transition: all 0.2s ease;
+        }
+        &:hover {
+            background: $white;
+            border-color: $black;
+            border-bottom-left-radius: 0.8rem;
+            border-top-right-radius: 0.8rem;
+            svg,
+            path {
+                fill: $black;
+            }
+        }
+    }
+    &__product {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        gap: 2rem;
+        &-img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 7.2rem;
+            height: auto;
+            overflow: hidden;
+            img {
+                max-width: 100%;
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                transition: all 0.2s ease;
+            }
+            &:hover {
+                img {
+                    transform: scale(1.05);
+                }
+            }
+        }
+        &-summary {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            h6 {
+                font-size: 1.2rem;
+                line-height: 125%;
+                transition: all 0.2s ease;
+            }
+        }
+        &-content {
+            width: 17.5rem;
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            @include maxw(380px) {
+                width: auto;
+            }
+        }
+        &-price {
+            font-size: 1.2rem;
+            line-height: 150%;
+        }
+        &-remove {
+            cursor: pointer;
+            width: 4rem;
+            height: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+
+            svg,
+            path {
+                transition: all 0.2s ease;
+            }
+            &:hover {
+                border-radius: 50%;
+                background: $grayLight;
+            }
+        }
+        &-count {
+            margin-top: 0.5rem;
+            .nice-select {
+                border-radius: 0;
+                padding: 0.9rem;
+                padding-right: 2.2rem;
+                height: auto;
+                width: auto;
+                line-height: normal;
+                &:after {
+                    border-color: $black;
+                    margin-top: -3px;
+                }
+            }
+        }
+    }
+    &__total {
+        &-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            p {
+                font-size: 1.4rem;
+                line-height: 150%;
+            }
+            + .bttn {
+                margin-top: 4rem;
+            }
+        }
+    }
+    &__bttn {
+        width: 100%;
+    }
+}

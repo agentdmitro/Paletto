@@ -1,0 +1,113 @@
+<section class="checkout" id="checkout">
+    <div class="container">
+        <form class="checkout__col checkout__form form">
+            <h5>Дані про покупця</h5>
+            <div class="form__input">
+                <input type="email" placeholder="Email" required>
+            </div>
+            <div class="form__input">
+                <input type="tel" placeholder="Телефон" required>
+            </div>
+            <div class="form__input form__input-row">
+                <input type="text" placeholder="Ім’я" required>
+                <input type="text" placeholder="Прізвище" required>
+            </div>
+            <div class="form__delivery">
+                <h5>Дані про доставку</h5>
+                <div class="form__input">
+                    <input type="text" placeholder="Країна" required>
+                </div>
+                <div class="form__input">
+                    <input type="text" placeholder="Місто" required>
+                </div>
+                <div class="form__input">
+                    <input type="text" placeholder="Відділення Нової Пошти" required>
+                </div>
+            </div>
+            <div class="form__pay">
+                <h5>Як вам зручно оплатити?</h5>
+                <div class="form__input">
+                    <input class="input-radio" type="radio" name="payment_type" id="payment_method_paypal">
+                    <label for="payment_method_paypal">Оплатити через PayPal</label>
+                </div>
+                <div class="form__input">
+                    <input class="input-radio" type="radio" name="payment_type" id="payment_method_cod">
+                    <label for="payment_method_cod">Оплата при отриманні <p>Враховуйте комісію поштового оператора</p>
+                    </label>
+
+                </div>
+
+            </div>
+            <div class="form__bttn">
+                <a href="#" class="bttn">Замовити — 29,40 €</a>
+            </div>
+        </form>
+        <div class="checkout__col checkout__cart">
+            <h5>Корзина</h5>
+            <div class="checkout__cart-wrap">
+                <div class="cart__product">
+                    <div class="cart__product-summary">
+                        <a href="#" class="cart__product-img"><img src="img/products/1.png" alt="image title"></a>
+                        <div class="cart__product-content">
+                            <a href="#">
+                                <h6>Nourishing moisturiser — 50 ml 1% Hyaluronic Acid + Shea Butter</h6>
+                            </a>
+                            <div class="cart__product-count">
+                                <select>
+                                    <option data-display="К-сть 1">К-сть 1</option>
+                                    <option value="1">1 Option</option>
+                                    <option value="2">2 Option</option>
+                                    <option value="3">3 Option</option>
+                                    <option value="4">4 Option</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="cart__product-price">23,50 €</div>
+                    <div class="cart__product-remove">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="32" viewBox="0 0 16 32" fill="none">
+                            <path d="M1.77747 21.0912L13.0912 9.77747L14.2226 10.9088L2.90884 22.2226L1.77747 21.0912Z"
+                                fill="black" />
+                            <path d="M2.90884 9.77747L14.2226 21.0912L13.0912 22.2226L1.77747 10.9088L2.90884 9.77747Z"
+                                fill="black" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="cart__product">
+                    <div class="cart__product-summary">
+                        <a href="#" class="cart__product-img"><img src="img/products/1.png" alt="image title"></a>
+                        <div class="cart__product-content">
+                            <a href="#">
+                                <h6>Nourishing moisturiser — 50 ml 1% Hyaluronic Acid + Shea Butter</h6>
+                            </a>
+                            <div class="cart__product-count">
+                                <select>
+                                    <option data-display="К-сть 1">К-сть 1</option>
+                                    <option value="1">1 Option</option>
+                                    <option value="2">2 Option</option>
+                                    <option value="3">3 Option</option>
+                                    <option value="4">4 Option</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="cart__product-price">23,50 €</div>
+                    <div class="cart__product-remove">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="32" viewBox="0 0 16 32" fill="none">
+                            <path d="M1.77747 21.0912L13.0912 9.77747L14.2226 10.9088L2.90884 22.2226L1.77747 21.0912Z"
+                                fill="black" />
+                            <path d="M2.90884 9.77747L14.2226 21.0912L13.0912 22.2226L1.77747 10.9088L2.90884 9.77747Z"
+                                fill="black" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="checkout__cart-summary">
+                <h5>Товар (<span>1</span>)</h5>
+                <h5>23,50 €</h5>
+            </div>
+        </div>
+    </div>
+</section>

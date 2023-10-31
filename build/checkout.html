@@ -18,6 +18,8 @@
 
 <body>
 
+
+
 	<div class="notif">
 		<div class="notif__wrap">
 			<div class="container">
@@ -27,7 +29,9 @@
 		</div>
 	</div>
 
-	<header class="header autoHide">
+
+
+	<header class="header autoHide header-checkout">
 		<div class="container">
 			<div class="header__col header__col-left">
 				<button class="header__burger"><span></span></button>
@@ -92,166 +96,123 @@
 
 	<main class="main">
 
-<section class="banner banner-2" id="banner">
-	<div class="container">
-		<div class="banner__wrap">
-			<div class="breadcrumbs"><a href="#">Головна</a> <span>/</span> <span class="current">Бестселери</span>
-			</div>
-			<h1 class="title--category">Бестеселери</h1>
-		</div>
-	</div>
-	<div class="banner__bg" style="background-image: url('../img/cover/front/2.png');"></div>
-</section>
+<style>
+    body {
+        background: #fff;
+    }
+</style>
 
-<section class="category__products" id="category-products">
+<section class="checkout" id="checkout">
     <div class="container">
-        <div class="best__wrap products__wrap products__wrap-category">
-            <!-- prettier-ignore -->
-            <div class="category__products-descr">
-                <p>Найулюбленіший догляд за обличчям, тілом, руками та волоссям наших клієнтів. Як і всі продукти
-                    Paletto, ці бестселери були розроблені без подразнюючих
-                    парабенів, феноксіетанолу, парафінової олії та сульфатів.</p>
+        <form class="checkout__col checkout__form form">
+            <h5>Дані про покупця</h5>
+            <div class="form__input">
+                <input type="email" placeholder="Email" required>
             </div>
-            <a href="#" class="product__item">
-    <div class="product__item-img">
-        <img src=img/products/0.png alt="product image">
-    </div>
-    <h6 class="product__item-title"><span>title</span> —
-        <span class="price">from 29,50 €</span>
-    </h6>
-</a>
-            <a href="#" class="product__item">
-    <div class="product__item-img">
-        <img src=img/products/1.png alt="product image">
-    </div>
-    <h6 class="product__item-title"><span>title 2</span> —
-        <span class="price">from 29,50 €</span>
-    </h6>
-</a>
-            <a href="#" class="product__item">
-    <div class="product__item-img">
-        <img src=img/products/9.png alt="product image">
-    </div>
-    <h6 class="product__item-title"><span>title Hydrolate</span> —
-        <span class="price">from 29,50 €</span>
-    </h6>
-</a>
-            <a href="#" class="product__item">
-    <div class="product__item-img">
-        <img src=img/products/3.png alt="product image">
-    </div>
-    <h6 class="product__item-title"><span>title 4</span> —
-        <span class="price">from 29,50 €</span>
-    </h6>
-</a>
-            <a href="#" class="product__item">
-    <div class="product__item-img">
-        <img src=img/products/4.png alt="product image">
-    </div>
-    <h6 class="product__item-title"><span>title 5</span> —
-        <span class="price">from 29,50 €</span>
-    </h6>
-</a>
-
-            <a href="single-blog.html" class="category__products-blog category__blog">
-                <div class="category__blog-img"><img src="img/category/blog.png" alt="category blog image"></div>
-                <div class="category__blog-content">
-                    <h5>Три кроки до сяючої шкіри</h5>
-                    <div class="products__more">Тут</div>
+            <div class="form__input">
+                <input type="tel" placeholder="Телефон" required>
+            </div>
+            <div class="form__input form__input-row">
+                <input type="text" placeholder="Ім’я" required>
+                <input type="text" placeholder="Прізвище" required>
+            </div>
+            <div class="form__delivery">
+                <h5>Дані про доставку</h5>
+                <div class="form__input">
+                    <input type="text" placeholder="Країна" required>
                 </div>
-            </a>
-        </div>
-        <div class="category__wrap ">
-            <a href="#" class="product__item">
-    <div class="product__item-img">
-        <img src=img/products/0.png alt="product image">
-    </div>
-    <h6 class="product__item-title"><span>title</span> —
-        <span class="price">from 29,50 €</span>
-    </h6>
-</a>
-            <a href="#" class="product__item">
-    <div class="product__item-img">
-        <img src=img/products/1.png alt="product image">
-    </div>
-    <h6 class="product__item-title"><span>title 2</span> —
-        <span class="price">from 29,50 €</span>
-    </h6>
-</a>
-            <a href="#" class="product__item">
-    <div class="product__item-img">
-        <img src=img/products/9.png alt="product image">
-    </div>
-    <h6 class="product__item-title"><span>title Hydrolate</span> —
-        <span class="price">from 29,50 €</span>
-    </h6>
-</a>
-            <a href="#" class="product__item">
-    <div class="product__item-img">
-        <img src=img/products/3.png alt="product image">
-    </div>
-    <h6 class="product__item-title"><span>title 4</span> —
-        <span class="price">from 29,50 €</span>
-    </h6>
-</a>
-            <a href="#" class="product__item">
-    <div class="product__item-img">
-        <img src=img/products/4.png alt="product image">
-    </div>
-    <h6 class="product__item-title"><span>title 5</span> —
-        <span class="price">from 29,50 €</span>
-    </h6>
-</a>
-            <a href="#" class="product__item">
-    <div class="product__item-img">
-        <img src=img/products/0.png alt="product image">
-    </div>
-    <h6 class="product__item-title"><span>title</span> —
-        <span class="price">from 29,50 €</span>
-    </h6>
-</a>
-            <a href="#" class="product__item">
-    <div class="product__item-img">
-        <img src=img/products/1.png alt="product image">
-    </div>
-    <h6 class="product__item-title"><span>title 2</span> —
-        <span class="price">from 29,50 €</span>
-    </h6>
-</a>
-            <a href="#" class="product__item">
-    <div class="product__item-img">
-        <img src=img/products/9.png alt="product image">
-    </div>
-    <h6 class="product__item-title"><span>title Hydrolate</span> —
-        <span class="price">from 29,50 €</span>
-    </h6>
-</a>
-            <a href="#" class="product__item">
-    <div class="product__item-img">
-        <img src=img/products/3.png alt="product image">
-    </div>
-    <h6 class="product__item-title"><span>title 4</span> —
-        <span class="price">from 29,50 €</span>
-    </h6>
-</a>
-            <a href="#" class="product__item">
-    <div class="product__item-img">
-        <img src=img/products/4.png alt="product image">
-    </div>
-    <h6 class="product__item-title"><span>title 5</span> —
-        <span class="price">from 29,50 €</span>
-    </h6>
-</a>
-        </div>
-        <div class="category__bttn">
-            <a href="#" class=" bttn bttn--load">Показати 20 <svg xmlns="http://www.w3.org/2000/svg" width="32"
-                    height="32" viewBox="0 0 32 32" fill="none">
-                    <path
-                        d="M15.9998 29.3334C23.2278 29.3334 29.3332 23.2281 29.3332 16.0001H26.6665C26.6665 21.7827 21.7825 26.6667 15.9998 26.6667C10.2172 26.6667 5.33317 21.7827 5.33317 16.0001C5.33317 10.2187 10.2172 5.33341 15.9998 5.33341V2.66675C8.77184 2.66675 2.6665 8.77341 2.6665 16.0001C2.6665 23.2281 8.77184 29.3334 15.9998 29.3334Z"
-                        fill="white" />
-                </svg></a>
-        </div>
+                <div class="form__input">
+                    <input type="text" placeholder="Місто" required>
+                </div>
+                <div class="form__input">
+                    <input type="text" placeholder="Відділення Нової Пошти" required>
+                </div>
+            </div>
+            <div class="form__pay">
+                <h5>Як вам зручно оплатити?</h5>
+                <div class="form__input">
+                    <input class="input-radio" type="radio" name="payment_type" id="payment_method_paypal">
+                    <label for="payment_method_paypal">Оплатити через PayPal</label>
+                </div>
+                <div class="form__input">
+                    <input class="input-radio" type="radio" name="payment_type" id="payment_method_cod">
+                    <label for="payment_method_cod">Оплата при отриманні <p>Враховуйте комісію поштового оператора</p>
+                    </label>
 
+                </div>
+
+            </div>
+            <div class="form__bttn">
+                <a href="#" class="bttn">Замовити — 29,40 €</a>
+            </div>
+        </form>
+        <div class="checkout__col checkout__cart">
+            <h5>Корзина</h5>
+            <div class="checkout__cart-wrap">
+                <div class="cart__product">
+                    <div class="cart__product-summary">
+                        <a href="#" class="cart__product-img"><img src="img/products/1.png" alt="image title"></a>
+                        <div class="cart__product-content">
+                            <a href="#">
+                                <h6>Nourishing moisturiser — 50 ml 1% Hyaluronic Acid + Shea Butter</h6>
+                            </a>
+                            <div class="cart__product-count">
+                                <select>
+                                    <option data-display="К-сть 1">К-сть 1</option>
+                                    <option value="1">1 Option</option>
+                                    <option value="2">2 Option</option>
+                                    <option value="3">3 Option</option>
+                                    <option value="4">4 Option</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="cart__product-price">23,50 €</div>
+                    <div class="cart__product-remove">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="32" viewBox="0 0 16 32" fill="none">
+                            <path d="M1.77747 21.0912L13.0912 9.77747L14.2226 10.9088L2.90884 22.2226L1.77747 21.0912Z"
+                                fill="black" />
+                            <path d="M2.90884 9.77747L14.2226 21.0912L13.0912 22.2226L1.77747 10.9088L2.90884 9.77747Z"
+                                fill="black" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="cart__product">
+                    <div class="cart__product-summary">
+                        <a href="#" class="cart__product-img"><img src="img/products/1.png" alt="image title"></a>
+                        <div class="cart__product-content">
+                            <a href="#">
+                                <h6>Nourishing moisturiser — 50 ml 1% Hyaluronic Acid + Shea Butter</h6>
+                            </a>
+                            <div class="cart__product-count">
+                                <select>
+                                    <option data-display="К-сть 1">К-сть 1</option>
+                                    <option value="1">1 Option</option>
+                                    <option value="2">2 Option</option>
+                                    <option value="3">3 Option</option>
+                                    <option value="4">4 Option</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="cart__product-price">23,50 €</div>
+                    <div class="cart__product-remove">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="32" viewBox="0 0 16 32" fill="none">
+                            <path d="M1.77747 21.0912L13.0912 9.77747L14.2226 10.9088L2.90884 22.2226L1.77747 21.0912Z"
+                                fill="black" />
+                            <path d="M2.90884 9.77747L14.2226 21.0912L13.0912 22.2226L1.77747 10.9088L2.90884 9.77747Z"
+                                fill="black" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="checkout__cart-summary">
+                <h5>Товар (<span>1</span>)</h5>
+                <h5>23,50 €</h5>
+            </div>
+        </div>
     </div>
 </section>
 

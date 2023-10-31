@@ -24,28 +24,34 @@ $(document).scroll(() => {
 
 
   if (mobile.matches) {
+    
     if (window.scrollY > $('.banner').outerHeight(true)) {
-      $('.header').addClass('.header--scrolled');
+      $('.header').addClass('header--scrolled');
     }else if($('.banner').length == 0){
-      if(window.scrollY > 150 && window.location.pathname !== '/menu.html'){
-        $('.header').addClass('.header--scrolled');
+      if(window.scrollY > 150){
+        if(window.location.pathname !== '/menu.html'){
+          $('.header').addClass('header--scrolled');
+        }
       }else{
-      $('.header').removeClass('.header--scrolled');
+      $('.header').removeClass('header--scrolled');
       }
     }else {
-      $('.header').removeClass('.header--scrolled');
+      $('.header').removeClass('header--scrolled');
     }
   } else {
+   
     if (window.scrollY > $('.banner').outerHeight(true)) {
-      $('.header').addClass('.header--scrolled');
+      $('.header').addClass('header--scrolled');
     }else if($('.banner').length == 0){
-      if(window.scrollY > 150 && window.location.pathname !== '/menu.html'){
-        $('.header').addClass('.header--scrolled');
+      if(window.scrollY > 150 ){
+        if(window.location.pathname !== '/menu.html'){
+          $('.header').addClass('header--scrolled');
+        }
       }else{
-      $('.header').removeClass('.header--scrolled');
+      $('.header').removeClass('header--scrolled');
       }
     }else {
-      $('.header').removeClass('.header--scrolled');
+      $('.header').removeClass('header--scrolled');
     }
   }
 
@@ -68,4 +74,27 @@ $(document).ready(function () {
     $('body').removeClass('menu-open');
     //$('.header__menu').slideUp();
   });
+
+  // CART ==========
+  $('.header__cart').on('click', function (e) {
+    e.preventDefault()
+    if (!$('body').hasClass('scroll-disable')) {
+      $('body').addClass('scroll-disable');
+      $('.cart').slideDown();
+    } else {
+      $('body').removeClass('scroll-disable');
+      $('.cart').slideUp();
+    }
+  });
+
+  $('.cart__bg, .cart__close').on('click', function () {
+    $('.cart').slideUp();
+    $('body').removeClass('scroll-disable');
+  });
+  
+if($('.cart')){
+  const cartPadding = $('.header').outerHeight() + $('.notif').outerHeight();
+  $('.cart').css(`padding-top`, `${cartPadding}px`)
+}
 });
+

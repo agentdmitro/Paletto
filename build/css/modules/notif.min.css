@@ -1,6 +1,11 @@
+.notif {
+  z-index: 6;
+}
 .notif__product {
   padding: 1.65rem;
   position: sticky;
+  z-index: 6;
+  background: #ffffff;
 }
 @media only screen and (max-width: 576px) {
   .notif__product {

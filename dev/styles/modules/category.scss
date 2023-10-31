@@ -64,4 +64,19 @@
             }
         }
     }
+    &__bttn {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 6rem;
+        @include maxw($tablet) {
+            margin-top: 3rem;
+        }
+        .bttn {
+            gap: 1.6rem;
+            padding-top: 1.2rem;
+            padding-bottom: 1.2rem;
+        }
+    }
 }

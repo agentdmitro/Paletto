@@ -14,6 +14,7 @@
   padding: 2rem 4.8rem;
   padding-right: 9.6rem;
   font-size: 3.4rem;
+  background: inherit;
   border: none;
 }
 .search__header input::placeholder {
