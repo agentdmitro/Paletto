@@ -160,6 +160,7 @@
         border: 1px solid $grayDark;
     }
     &__like {
+        transition: all 0.2s ease;
         svg,
         path {
             transition: all 0.2s ease;

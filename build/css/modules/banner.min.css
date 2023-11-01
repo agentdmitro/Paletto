@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .banner {
   height: 100vh;
   display: flex;
@@ -10,6 +11,11 @@
     padding-top: 2.4rem;
     padding-bottom: 0;
   }
+}
+.banner.reg {
+  height: auto;
+  padding: 12rem 0;
+  max-height: auto;
 }
 @media only screen and (min-width: 992px) {
   .banner {
@@ -139,4 +145,69 @@
 }
 .breadcrumbs a:hover {
   color: #909090;
+}
+
+.reg__wrap {
+  margin: 3.8rem auto 0;
+  width: 80rem;
+  max-width: 100%;
+}
+.reg__wrap form {
+  padding: 7.2rem;
+  padding-bottom: 4rem;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.reg__wrap form h5 {
+  font-size: 2.4rem;
+  margin-bottom: 3rem;
+}
+.reg__input-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.reg__input label {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  cursor: pointer;
+}
+.reg__input label p {
+  line-height: 100%;
+  font-size: 1.4rem;
+}
+.reg__input label input {
+  padding: 2.1rem 1.6rem;
+  font-size: 1.4rem;
+}
+.reg__input label input:hover, .reg__input label input:focus {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.reg__input + .reg__input {
+  margin-top: 2rem;
+}
+
+.iti__flag-container {
+  margin: 16px;
+  position: relative;
+}
+
+.iti__selected-flag {
+  flex-wrap: wrap;
+}
+.iti__selected-flag::before {
+  content: "Країна";
+  display: flex;
+  flex: 1;
+}
+
+.iti {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  border: 2px solid;
+  border-radius: 10px;
+  background: #eeeeee;
 }

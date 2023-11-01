@@ -75,6 +75,18 @@ $(document).ready(function() {
 			$('#search__input').val("");
 		})
 	}
+
+	const phoneInputField = document.querySelectorAll('#phone');
+	if (phoneInputField) {
+		phoneInputField.forEach((phone) => {
+		const phoneInput = window.intlTelInput(phone, {
+			preferredCountries: ['ua', 'us', 'gb'],
+			separateDialCode: true,
+			hiddenInput: 'full',
+			utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js',
+		});
+		});
+	}
 });
 
 // Динамический адаптив

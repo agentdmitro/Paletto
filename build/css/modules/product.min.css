@@ -161,6 +161,9 @@
   padding: 0.2rem 0.9rem;
   border: 1px solid #cecdc9;
 }
+.product__like {
+  transition: all 0.2s ease;
+}
 .product__like svg,
 .product__like path {
   transition: all 0.2s ease;
