@@ -75,7 +75,6 @@ $(document).ready(function() {
 			$('#search__input').val("");
 		})
 	}
-
 	const phoneInputField = document.querySelectorAll('#phone');
 	if (phoneInputField) {
 		phoneInputField.forEach((phone) => {
@@ -87,6 +86,32 @@ $(document).ready(function() {
 		});
 		});
 	}
+
+	$('.show__pass-password').on('click',function(e){
+		if('password' == $('#password').attr('type')){
+			$('#password').prop('type', 'text');
+			$(this).children('.hide').show()
+			$(this).children('.show').hide()
+	   }else{
+			$('#password').prop('type', 'password');
+			$(this).children('.hide').hide()
+			$(this).children('.show').show()
+	   }
+	})
+
+	
+	$('.show__pass-password-confirm').on('click',function(e){
+		if('password' == $('#password-confirm').attr('type')){
+			$('#password-confirm').prop('type', 'text');
+			$(this).children('.hide').show()
+			$(this).children('.show').hide()
+	   }else{
+			$('#password-confirm').prop('type', 'password');
+			$(this).children('.hide').hide()
+			$(this).children('.show').show()
+	   }
+	})
+
 });
 
 // Динамический адаптив

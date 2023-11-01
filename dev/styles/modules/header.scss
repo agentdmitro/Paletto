@@ -42,7 +42,6 @@
             padding: 0 2.5rem;
         }
         @include maxw(320px) {
-            flex-wrap: wrap;
             justify-content: center;
         }
     }

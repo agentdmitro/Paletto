@@ -1,0 +1,36 @@
+<section class="account" id="account">
+    <div class="container">
+        <nav class="account__menu">
+            <h6><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
+                    <path d="M0 5.3H8.5L5.5 2.2L7.2 0.5L13 6.5L7.2 12.5L5.5 10.8L8.5 7.7H0V5.3Z" fill="black" />
+                </svg> Акаунт</h6>
+            <ul>
+                <li><a href="#fav">Фаворити</a></li>
+                <li><a href="#delivery">Адреси для доставки</a></li>
+                <li><a href="#">Вийти</a></li>
+            </ul>
+        </nav>
+        <div class="account__wrap">
+            <div class="account__item" id="fav">
+                <div class="account__item-header">
+                    <h5>Фаворити</h5>
+                </div>
+                <div class="account__item-products grid-3">
+                    @@include('./product/item.html', {"img": "6", "title": "title 3" , "price": "from 11 €"})
+                    @@include('./product/item.html', {"img": "2", "title": "title 3" , "price": "from 11 €"})
+                    @@include('./product/item.html', {"img": "1", "title": "title 3" , "price": "from 11 €"})
+                    @@include('./product/item.html', {"img": "0", "title": "title 3" , "price": "from 11 €"})
+
+                </div>
+            </div>
+            <div class="account__item" id="delivery">
+                <div class="account__item-header">
+                    <h5>Адреси для доставки</h5>
+                </div>
+                <div class="account__item-products grid-3">
+                    Ви ще не додали адресу для доставки.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
