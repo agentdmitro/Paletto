@@ -56,13 +56,14 @@ body {
 
     &.scroll-disable {
         height: 100vh;
-        overflow: hidden;
+        // overflow: hidden;
         .header {
             top: 0rem;
             background: $white;
+            position: fixed;
         }
         .notif {
-            display: none;
+            opacity: 0;
         }
     }
 }

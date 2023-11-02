@@ -5,7 +5,10 @@
   width: 100%;
   height: 100%;
   z-index: 5;
-  display: none;
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+  transition: all 0.2s ease;
 }
 .cart__bg {
   position: fixed;
@@ -16,6 +19,14 @@
   z-index: 5;
   background: rgba(0, 0, 0, 0.5);
 }
+.cart.active {
+  pointer-events: all;
+  opacity: 1;
+  height: auto;
+}
+.cart.active .cart__wrap {
+  transform: translate(0);
+}
 .cart__wrap {
   z-index: 6;
   display: flex;
@@ -24,6 +35,8 @@
   justify-content: flex-end;
   height: 100%;
   overflow: auto;
+  transition: all 0.2s ease;
+  transform: translateX(100%);
 }
 @media only screen and (max-width: 576px) {
   .cart__wrap {

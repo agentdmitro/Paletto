@@ -80,15 +80,18 @@ $(document).ready(function () {
     e.preventDefault()
     if (!$('body').hasClass('scroll-disable')) {
       $('body').addClass('scroll-disable');
-      $('.cart').slideDown();
+      $('.cart').addClass('active');
+      // $('.cart').slideDown();
     } else {
       $('body').removeClass('scroll-disable');
-      $('.cart').slideUp();
+      // $('.cart').slideUp();
+      $('.cart').removeClass('active');
     }
   });
 
   $('.cart__bg, .cart__close').on('click', function () {
-    $('.cart').slideUp();
+    $('.cart').removeClass('active');
+    // $('.cart').slideUp();
     $('body').removeClass('scroll-disable');
   });
   

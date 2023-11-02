@@ -1,11 +1,11 @@
 @import '../core';
 
 .notif {
-    z-index: 6;
+    z-index: 4;
     &__product {
         padding: 1.65rem;
         position: sticky;
-        z-index: 6;
+        z-index: 4;
         background: $white;
         @include maxw($mob) {
             display: none;
