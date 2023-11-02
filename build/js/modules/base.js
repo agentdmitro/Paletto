@@ -93,7 +93,7 @@ $(document).ready(function () {
   });
   
 if($('.cart')){
-  const cartPadding = $('.header').outerHeight() + $('.notif').outerHeight();
+  const cartPadding = $('.header').outerHeight();
   $('.cart').css(`padding-top`, `${cartPadding}px`)
 }
 });

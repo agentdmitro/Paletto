@@ -58,8 +58,11 @@ body {
         height: 100vh;
         overflow: hidden;
         .header {
-            top: 4rem;
+            top: 0rem;
             background: $white;
+        }
+        .notif {
+            display: none;
         }
     }
 }
