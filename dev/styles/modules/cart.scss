@@ -23,7 +23,7 @@
     &.active {
         pointer-events: all;
         opacity: 1;
-        height: auto;
+        height: 100%;
     }
     &.active &__wrap {
         transform: translate(0);
@@ -107,6 +107,7 @@
             }
         }
     }
+
     &__product {
         display: flex;
         align-items: center;
@@ -191,6 +192,7 @@
         }
     }
     &__total {
+        margin-top: auto;
         &-header {
             display: flex;
             align-items: center;

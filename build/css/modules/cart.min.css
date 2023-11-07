@@ -22,7 +22,7 @@
 .cart.active {
   pointer-events: all;
   opacity: 1;
-  height: auto;
+  height: 100%;
 }
 .cart.active .cart__wrap {
   transform: translate(0);
@@ -192,6 +192,9 @@
 .cart__product-count .nice-select:after {
   border-color: #050505;
   margin-top: -3px;
+}
+.cart__total {
+  margin-top: auto;
 }
 .cart__total-header {
   display: flex;

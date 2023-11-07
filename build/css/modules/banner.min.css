@@ -78,6 +78,16 @@
     padding: 3rem 0;
   }
 }
+.banner.reg .buttons label {
+  display: flex;
+  align-items: center;
+}
+.banner.reg .buttons label input {
+  width: max-content;
+}
+.banner.reg .buttons label a {
+  display: unset;
+}
 .banner.login {
   min-height: auto;
   padding-bottom: 8.5rem;
@@ -213,6 +223,16 @@
   color: #909090;
 }
 
+.reg__agree {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.reg__agree b {
+  margin-left: 0.3rem;
+  font-size: inherit;
+  font-size: 1.4rem;
+}
 .reg__wrap {
   margin: 3.8rem auto 0;
   width: 80rem;

@@ -928,6 +928,16 @@ input {
     padding: 3rem 0;
   }
 }
+.banner.reg .buttons label {
+  display: flex;
+  align-items: center;
+}
+.banner.reg .buttons label input {
+  width: max-content;
+}
+.banner.reg .buttons label a {
+  display: unset;
+}
 .banner.login {
   min-height: auto;
   padding-bottom: 8.5rem;
@@ -1063,6 +1073,16 @@ input {
   color: #909090;
 }
 
+.reg__agree {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.reg__agree b {
+  margin-left: 0.3rem;
+  font-size: inherit;
+  font-size: 1.4rem;
+}
 .reg__wrap {
   margin: 3.8rem auto 0;
   width: 80rem;
@@ -2417,7 +2437,7 @@ input {
 .cart.active {
   pointer-events: all;
   opacity: 1;
-  height: auto;
+  height: 100%;
 }
 .cart.active .cart__wrap {
   transform: translate(0);
@@ -2587,6 +2607,9 @@ input {
 .cart__product-count .nice-select:after {
   border-color: #050505;
   margin-top: -3px;
+}
+.cart__total {
+  margin-top: auto;
 }
 .cart__total-header {
   display: flex;
@@ -2931,6 +2954,14 @@ input {
     flex-direction: column;
   }
 }
+.thank .container {
+  z-index: 4;
+}
+.thank .text {
+  margin-top: 3rem;
+  width: 59.3rem;
+  max-width: 100%;
+}
 .thank h2 {
   max-width: 74rem;
 }
@@ -2948,6 +2979,9 @@ input {
   .thank a {
     width: 100%;
   }
+}
+.thank .banner__bg {
+  z-index: 0;
 }
 @media only screen and (max-width: 878px) {
   .thank .banner__bg {

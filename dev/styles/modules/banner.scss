@@ -63,6 +63,18 @@
         @include maxw($mob) {
             padding: 3rem 0;
         }
+        .buttons {
+            label {
+                display: flex;
+                align-items: center;
+                input {
+                    width: max-content;
+                }
+                a {
+                    display: unset;
+                }
+            }
+        }
     }
     &.login {
         min-height: auto;
@@ -187,6 +199,16 @@
 }
 
 .reg {
+    &__agree {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+        b {
+            margin-left: 0.3rem;
+            font-size: inherit;
+            font-size: 1.4rem;
+        }
+    }
     &__wrap {
         margin: 3.8rem auto 0;
         width: 80rem;

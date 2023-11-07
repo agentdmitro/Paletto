@@ -13,6 +13,14 @@
     flex-direction: column;
   }
 }
+.thank .container {
+  z-index: 4;
+}
+.thank .text {
+  margin-top: 3rem;
+  width: 59.3rem;
+  max-width: 100%;
+}
 .thank h2 {
   max-width: 74rem;
 }
@@ -30,6 +38,9 @@
   .thank a {
     width: 100%;
   }
+}
+.thank .banner__bg {
+  z-index: 0;
 }
 @media only screen and (max-width: 878px) {
   .thank .banner__bg {

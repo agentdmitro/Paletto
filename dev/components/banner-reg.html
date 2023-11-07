@@ -26,16 +26,7 @@
 						<input type="text" placeholder="Номер *" required id="phone">
 					</label>
 				</div>
-				<div class="reg__input reg__input-row">
-					<label>
-						<p>Введіть адресу для доставки *</p>
-						<input type="email" required>
-					</label>
-					<label>
-						<p>Найближче відділення Нової Пошти</p>
-						<input type="text" required>
-					</label>
-				</div>
+
 				<div class="reg__input reg__input-row">
 					<label>
 						<p>Пароль *</p>
@@ -79,11 +70,26 @@
 						</div>
 					</label>
 				</div>
-				<button class="reg__bttn bttn">Реєстрація</button>
-				<div class="reg__footer">
-					<a href="login.html">Уже маю акаунт</a>
-					<p>Створюючи обліковий запис, ви погоджуєтеся з нашими Умовами використання та погоджуєтеся з
-						політикою обробки даних Політики конфіденційності Paletto.</p>
+				<div class="buttons">
+					<div class="pull-right">
+						<div class="reg__agree">
+							<input type="checkbox" id="agree" name="agree" value="1" class="input-radio">
+							<label for="agree">
+								<span>Я погоджуюсь з умовами <a
+										href="https://paletto.com.ua/index.php?route=information/information/agree&amp;information_id=3"
+										class="agree"><b>Політика конфіденційності</b></a></span>
+							</label>
+						</div>
+						<button class="reg__bttn bttn">Продовжити</button>
+
+						<div class="reg__footer">
+							<a href="https://paletto.com.ua/index.php?route=account/login">Уже маю акаунт</a>
+							<p>Створюючи обліковий запис, ви погоджуєтеся з нашими Умовами використання та погоджуєтеся
+								з
+								політикою обробки даних Політики конфіденційності Paletto.</p>
+						</div>
+
+					</div>
 				</div>
 			</form>
 		</div>

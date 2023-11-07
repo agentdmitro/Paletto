@@ -12,6 +12,14 @@
         padding-top: 24rem;
         flex-direction: column;
     }
+    .container {
+        z-index: 4;
+    }
+    .text {
+        margin-top: 3rem;
+        width: 59.3rem;
+        max-width: 100%;
+    }
     h2 {
         max-width: 74rem;
         @include maxw($xl-tablet) {
@@ -27,6 +35,7 @@
         }
     }
     .banner__bg {
+        z-index: 0;
         @include maxw($xl-tablet) {
             position: static;
             z-index: 2;
