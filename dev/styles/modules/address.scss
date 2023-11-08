@@ -26,7 +26,7 @@
             white-space: nowrap;
             margin-top: 0;
         }
-        @include maxw($mob) {
+        @include maxw($tablet) {
             padding: 2rem;
             padding-left: 2rem;
             flex-direction: column;
@@ -86,6 +86,29 @@
             a {
                 width: 43.7rem;
             }
+        }
+    }
+    &__remove {
+        font-family: 'Product Sans Infanity', sans-serif;
+        font-size: 1.6rem;
+        display: flex;
+        align-items: center;
+        line-height: normal;
+        gap: 0.3rem;
+        text-transform: uppercase;
+        @include maxw($tablet) {
+            margin-left: auto;
+        }
+        &::before {
+            content: '';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            background-size: cover;
+            background-image: url(../img/icons/address_remove.svg);
+            background-repeat: no-repeat;
         }
     }
 }

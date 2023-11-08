@@ -22,7 +22,7 @@
   white-space: nowrap;
   margin-top: 0;
 }
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 768px) {
   .address__item {
     padding: 2rem;
     padding-left: 2rem;
@@ -87,4 +87,29 @@
 }
 .address-edit__bttn a {
   width: 43.7rem;
+}
+.address__remove {
+  font-family: "Product Sans Infanity", sans-serif;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  line-height: normal;
+  gap: 0.3rem;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 768px) {
+  .address__remove {
+    margin-left: auto;
+  }
+}
+.address__remove::before {
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background-size: cover;
+  background-image: url(../img/icons/address_remove.svg);
+  background-repeat: no-repeat;
 }
