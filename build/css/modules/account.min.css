@@ -1,79 +1,43 @@
 .account {
   background: #ffffff;
 }
-.account .container {
-  display: flex;
-  justify-content: space-between;
-  gap: 4rem;
-}
-@media only screen and (max-width: 576px) {
-  .account .container {
-    flex-direction: column;
-  }
-}
-.account h6 {
-  font-weight: 400;
-}
-.account__menu {
-  width: 20.8rem;
-  max-width: 100%;
-}
-.account__menu h6 {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.8rem;
-  cursor: pointer;
-}
-.account__menu h6 svg,
-.account__menu h6 path {
-  transition: all 0.2s ease;
-}
-.account__menu h6:hover svg {
-  transform: translateX(0.2rem);
-}
-.account__menu ul {
-  margin-top: 2rem;
-}
-.account__menu ul li a {
-  padding: 1rem 0;
-  font-size: 1.4rem;
-  transition: all 0.2s ease;
-  display: flex;
-}
-.account__menu ul li a:hover {
-  background: #fbf9f7;
-}
 .account__wrap {
-  width: 82.4rem;
+  display: flex;
+  width: 59.4rem;
   max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 5rem;
-}
-.account__item-header {
-  padding: 1.8rem 0;
-  border-bottom: 1px solid #cecdc9;
-}
-.account__item-header h5 {
-  font-size: 2rem;
-  text-transform: uppercase;
-}
-.account__item-products {
-  margin-top: 2.4rem;
-}
-.account__item-products .product__item-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 32.6rem;
-}
-@media only screen and (max-width: 768px) {
-  .account__item-products .product__item-img {
-    min-height: 30rem;
-  }
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 3rem;
 }
 @media only screen and (max-width: 576px) {
-  .account__item-products .product__item-img {
-    min-height: 25rem;
+  .account__wrap {
+    gap: 2rem;
   }
+}
+.account__item {
+  flex: 1 1 calc(50% - 3rem);
+  padding: 2.8rem;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  background: #e9e9e9;
+  transition: all 0.2s ease;
+}
+.account__item-img {
+  margin-bottom: 2rem;
+}
+.account__item:hover {
+  background: #d9d9d9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+@media only screen and (max-width: 576px) {
+  .account__item {
+    flex: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+.account__bttn {
+  margin-top: 3rem;
+  flex: 1;
 }

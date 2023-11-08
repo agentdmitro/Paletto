@@ -10,6 +10,9 @@
         padding-top: 2.4rem;
         padding-bottom: 0;
     }
+    .container {
+        z-index: 2;
+    }
     &-account {
         height: auto;
         max-height: unset;
@@ -145,7 +148,7 @@
     &__bg {
         position: absolute;
         top: 0;
-        z-index: -1;
+        z-index: 0;
         width: 100%;
         height: 100%;
         display: flex;
@@ -178,6 +181,15 @@
             background-position: right;
             z-index: 1;
         }
+    }
+    &-favs &__bg {
+        @include maxw($tablet) {
+            background-size: cover;
+        }
+    }
+    &-slider,
+    &-pagination {
+        z-index: 1;
     }
 }
 

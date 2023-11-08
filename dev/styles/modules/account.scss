@@ -2,82 +2,40 @@
 
 .account {
     background: $white;
-    .container {
-        display: flex;
-        justify-content: space-between;
-        gap: 4rem;
-        @include maxw($mob) {
-            flex-direction: column;
-        }
-    }
-    h6 {
-        font-weight: 400;
-    }
-    &__menu {
-        width: 20.8rem;
-        max-width: 100%;
-        h6 {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.8rem;
-            cursor: pointer;
-            svg,
-            path {
-                transition: all 0.2s ease;
-            }
-            &:hover {
-                svg {
-                    transform: translateX(0.2rem);
-                }
-            }
-        }
-        ul {
-            margin-top: 2rem;
-            li {
-                a {
-                    padding: 1rem 0;
-                    font-size: 1.4rem;
-                    transition: all 0.2s ease;
-                    display: flex;
-                    &:hover {
-                        background: $bgColor;
-                    }
-                }
-            }
-        }
-    }
     &__wrap {
-        width: 82.4rem;
-        max-width: 100%;
         display: flex;
-        flex-direction: column;
-        gap: 5rem;
+        width: 59.4rem;
+        max-width: 100%;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        gap: 3rem;
+        @include maxw($mob) {
+            gap: 2rem;
+        }
     }
     &__item {
-        &-header {
-            padding: 1.8rem 0;
-            border-bottom: 1px solid $grayDark;
-            h5 {
-                font-size: 2rem;
-                text-transform: uppercase;
-            }
+        flex: 1 1 calc(50% - 3rem);
+        padding: 2.8rem;
+        text-align: center;
+        width: 100%;
+        height: auto;
+        background: $grayAccount;
+        transition: all 0.2s ease;
+        &-img {
+            margin-bottom: 2rem;
         }
-        &-products {
-            margin-top: 2.4rem;
-            .product__item {
-                &-img {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    min-height: 32.6rem;
-                    @include maxw($tablet) {
-                        min-height: 30rem;
-                    }
-                    @include maxw($mob) {
-                        min-height: 25rem;
-                    }
-                }
-            }
+        &:hover {
+            background: $grayLight;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
+        @include maxw($mob) {
+            flex: 100%;
+            max-width: 80%;
+            margin: 0 auto;
+        }
+    }
+    &__bttn {
+        margin-top: 3rem;
+        flex: 1;
     }
 }
