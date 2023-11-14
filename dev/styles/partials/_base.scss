@@ -53,6 +53,10 @@ body {
         overflow: hidden;
         height: 100vh;
     }
+    &.search-open {
+        height: 100vh;
+        overflow: hidden;
+    }
 
     &.scroll-disable {
         height: 100vh;

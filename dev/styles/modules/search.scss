@@ -1,10 +1,28 @@
 @import '../core';
 
 .search {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 101;
+    background: $bgColor;
+    padding-top: 0;
+    opacity: 0;
+    transition: all 0.2s ease;
+    pointer-events: none;
+    overflow: auto;
+    &.active {
+        pointer-events: all;
+        opacity: 1;
+    }
     &__header {
         padding: 2.4rem 0;
         border-bottom: 1px solid $grayDark;
+        margin-bottom: 6.4rem;
         @include maxw($tablet) {
+            margin-bottom: 4rem;
             padding: 0;
             .container {
                 padding: 0;
@@ -78,7 +96,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: $white;
+        background: $bgColor;
+        user-select: none;
         height: 100%;
         border-radius: 0;
         &:hover {

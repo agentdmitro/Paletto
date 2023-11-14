@@ -101,3 +101,23 @@ if($('.cart')){
 }
 });
 
+
+// SEARCH ==========
+$('.header__search-bttn').on('click', function (e) {
+  e.preventDefault()
+  if (!$('body').hasClass('search-open ')) {
+    $('body').addClass('search-open ');
+    $('.search').addClass('active');
+    // $('.cart').slideDown();
+  } else {
+    $('body').removeClass('search-open ');
+    // $('.cart').slideUp();
+    $('.search').removeClass('active');
+  }
+});
+
+$('.search__remove').on('click', function () {
+  $('.search').removeClass('active');
+  // $('.cart').slideUp();
+  $('body').removeClass('search-open');
+});
