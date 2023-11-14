@@ -10,20 +10,7 @@
             padding-top: 0;
             padding-bottom: 4rem;
         }
-        &::before {
-            content: '';
-            left: 0;
-            position: absolute;
-            z-index: 0;
-            top: 0;
-            height: 100%;
-            width: 54.5%;
-            background: $bgProduct;
-            @include maxw(1200px) {
-                width: 100%;
-                height: 70%;
-            }
-        }
+
         .container {
             display: flex;
             justify-content: space-between;
@@ -38,7 +25,6 @@
     &__img {
         width: 63rem;
         max-width: 100%;
-        background: $bgProduct;
         &::before {
             content: '';
             left: 0;
@@ -263,6 +249,16 @@
 
 // INFO
 .product {
+    &__item {
+        &-title {
+            s {
+                font-size: 1.2rem;
+            }
+            .newprice {
+                color: #a30202;
+            }
+        }
+    }
     &__info {
         margin-top: 7.2rem;
         @include maxw($tablet) {

@@ -85,7 +85,7 @@
     margin-top: 1rem;
   }
 }
-.address-edit__bttn a {
+.address-edit__bttn .bttn {
   width: 43.7rem;
 }
 .address__remove {
