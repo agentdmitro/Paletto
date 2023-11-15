@@ -86,7 +86,22 @@
             overflow: visible;
         }
     }
-
+    &__cart {
+        &-count {
+            position: absolute;
+            right: -0.5rem;
+            top: -0.5rem;
+            width: 1.2rem;
+            height: 1.2rem;
+            font-size: 0.9rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: $white;
+            border: 1px solid $black;
+        }
+    }
     &__menu {
         ul {
             display: flex;

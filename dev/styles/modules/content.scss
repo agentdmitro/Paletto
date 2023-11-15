@@ -1,0 +1,38 @@
+@import '../core';
+
+.content {
+    padding: 4rem 0 12rem;
+    background: $white;
+    @include maxw($tablet) {
+        padding: 4rem 0;
+    }
+    &__wrap {
+        max-width: 59.3rem;
+    }
+    p {
+        + p {
+            margin-top: 2rem;
+        }
+        + h5 {
+            margin-top: 4rem;
+        }
+        + ul {
+            margin-top: 4rem;
+        }
+    }
+    h5 {
+        + p {
+            margin-top: 3rem;
+        }
+        + ul {
+            margin-top: 3rem;
+        }
+    }
+    ul {
+        li {
+            + li {
+                margin-top: 1rem;
+            }
+        }
+    }
+}

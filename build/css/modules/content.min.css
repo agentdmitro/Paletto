@@ -1,0 +1,30 @@
+.content {
+  padding: 4rem 0 12rem;
+  background: #ffffff;
+}
+@media only screen and (max-width: 768px) {
+  .content {
+    padding: 4rem 0;
+  }
+}
+.content__wrap {
+  max-width: 59.3rem;
+}
+.content p + p {
+  margin-top: 2rem;
+}
+.content p + h5 {
+  margin-top: 4rem;
+}
+.content p + ul {
+  margin-top: 4rem;
+}
+.content h5 + p {
+  margin-top: 3rem;
+}
+.content h5 + ul {
+  margin-top: 3rem;
+}
+.content ul li + li {
+  margin-top: 1rem;
+}

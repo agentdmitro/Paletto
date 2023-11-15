@@ -667,6 +667,20 @@ input {
     overflow: visible;
   }
 }
+.header__cart-count {
+  position: absolute;
+  right: -0.5rem;
+  top: -0.5rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  font-size: 0.9rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid #050505;
+}
 .header__menu ul {
   display: flex;
   align-items: center;
@@ -1048,6 +1062,7 @@ input {
 .banner-2 {
   height: 100%;
   min-height: 44.2rem;
+  height: 51.2rem;
   max-height: 51.2rem;
 }
 .banner-2 .banner__wrap {
@@ -3105,6 +3120,37 @@ input {
     height: 31rem;
     margin-top: auto;
   }
+}
+
+.content {
+  padding: 4rem 0 12rem;
+  background: #ffffff;
+}
+@media only screen and (max-width: 768px) {
+  .content {
+    padding: 4rem 0;
+  }
+}
+.content__wrap {
+  max-width: 59.3rem;
+}
+.content p + p {
+  margin-top: 2rem;
+}
+.content p + h5 {
+  margin-top: 4rem;
+}
+.content p + ul {
+  margin-top: 4rem;
+}
+.content h5 + p {
+  margin-top: 3rem;
+}
+.content h5 + ul {
+  margin-top: 3rem;
+}
+.content ul li + li {
+  margin-top: 1rem;
 }
 
 .footer {

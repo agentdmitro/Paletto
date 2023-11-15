@@ -91,6 +91,20 @@
     overflow: visible;
   }
 }
+.header__cart-count {
+  position: absolute;
+  right: -0.5rem;
+  top: -0.5rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  font-size: 0.9rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid #050505;
+}
 .header__menu ul {
   display: flex;
   align-items: center;
