@@ -118,7 +118,7 @@
             align-items: center;
             justify-content: center;
             width: 7.2rem;
-            height: auto;
+            height: max-content;
             overflow: hidden;
             img {
                 max-width: 100%;
@@ -135,9 +135,9 @@
         }
         &-summary {
             display: flex;
-            align-items: center;
             gap: 1.2rem;
             h6 {
+                font-weight: 500;
                 font-size: 1.2rem;
                 line-height: 125%;
                 transition: all 0.2s ease;

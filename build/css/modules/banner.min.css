@@ -308,6 +308,9 @@
   width: 100%;
   margin-top: 3rem;
 }
+.reg__bttn {
+  margin-top: 1rem;
+}
 .reg__footer {
   margin-top: 2rem;
   text-align: center;

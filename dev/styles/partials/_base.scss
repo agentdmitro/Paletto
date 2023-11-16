@@ -121,6 +121,8 @@ main {
 .grid-3,
 .grid-4 {
     grid-gap: 2rem;
+    display: flex;
+    flex-direction: column;
     & > div,
     & > a {
         @include minw($gridMinSize + px) {
@@ -130,6 +132,7 @@ main {
 
     @include minw($gridMinSize + px) {
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
     }
@@ -234,4 +237,8 @@ main {
             }
         }
     }
+}
+
+.form__input .nice-select:after {
+    right: 2rem;
 }

@@ -17,7 +17,7 @@
     .container {
         max-width: 156rem;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         gap: 3rem;
         @include maxw(1030px) {
             flex-direction: column-reverse;
@@ -27,11 +27,11 @@
         }
     }
     &__form {
-        width: 87.5rem;
+        width: 60.5rem;
         max-width: 100%;
     }
     &__cart {
-        width: 59.2rem;
+        width: 68.2rem;
         max-width: 100%;
         display: flex;
         flex-direction: column;
@@ -42,7 +42,7 @@
             gap: 4rem;
         }
         .cart__product {
-            width: 51.4rem;
+            width: 100%;
             max-width: 100%;
             align-items: start;
             &-img {
@@ -87,15 +87,15 @@
     }
     &__delivery,
     &__pay {
-        margin-top: 12rem;
+        margin-top: 6rem;
         @include maxw($tablet) {
-            margin-top: 6rem;
+            margin-top: 4rem;
         }
     }
     input {
         width: 100%;
         padding: 1rem;
-        font-size: 3rem;
+        font-size: 2rem;
         border: none;
         border-bottom: 1px solid $gray;
         transition: all 0.2s ease;
@@ -108,7 +108,7 @@
         }
         &::placeholder {
             color: $gray;
-            font-size: 3rem;
+            font-size: 2rem;
             @include maxw($tablet) {
                 font-size: 1.4rem;
             }
@@ -134,7 +134,7 @@
         width: 43.7rem;
         max-width: 100%;
         label {
-            font-size: 3rem;
+            font-size: 2rem;
             flex-wrap: wrap;
             @include maxw($tablet) {
                 font-size: 1.4rem;
@@ -142,11 +142,12 @@
             p {
                 width: 100%;
                 margin-top: 1.4rem;
-                font-size: 2rem;
+                font-size: 1.6rem;
                 color: $gray;
                 padding-left: 2.8rem;
                 line-height: normal;
                 @include maxw($tablet) {
+                    margin-top: 1px;
                     font-size: 1.2rem;
                 }
             }
@@ -161,7 +162,7 @@
         }
     }
     &__bttn {
-        margin-top: 9.3rem;
+        margin-top: 5.3rem;
         width: 43.7rem;
         max-width: 100%;
         a {

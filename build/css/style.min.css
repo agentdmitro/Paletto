@@ -131,6 +131,8 @@ main {
 .grid-3,
 .grid-4 {
   grid-gap: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 @media only screen and (min-width: 350px) {
   .grid-2 > div, .grid-2 > a,
@@ -146,6 +148,7 @@ main {
   .grid-3,
   .grid-4 {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
   }
@@ -235,6 +238,10 @@ main {
   .text p + p {
     margin-top: 2rem;
   }
+}
+
+.form__input .nice-select:after {
+  right: 2rem;
 }
 
 h1,
@@ -587,9 +594,6 @@ input {
   top: 0rem;
   z-index: 99;
   transition: background 0.3s linear;
-}
-.header-checkout {
-  top: 4rem;
 }
 @media only screen and (max-width: 768px) {
   .header {
@@ -1187,6 +1191,9 @@ input {
   width: 100%;
   margin-top: 3rem;
 }
+.reg__bttn {
+  margin-top: 1rem;
+}
 .reg__footer {
   margin-top: 2rem;
   text-align: center;
@@ -1552,6 +1559,9 @@ input {
 .products__wrap-category .product__item:nth-child(4) {
   grid-column: span 2;
   grid-row: span 2;
+}
+.products__wrap-category .product__item:nth-child(4) .product__item-img {
+  height: 100%;
 }
 .products__wrap-category .product__item:nth-child(4) img {
   max-height: 100%;
@@ -2219,6 +2229,10 @@ input {
   padding-top: 1.2rem;
   padding-bottom: 1.2rem;
 }
+.category-empty {
+  margin-top: 4rem;
+  text-align: center;
+}
 
 .menu {
   position: fixed;
@@ -2632,7 +2646,7 @@ input {
   align-items: center;
   justify-content: center;
   width: 7.2rem;
-  height: auto;
+  height: max-content;
   overflow: hidden;
 }
 .cart__product-img img {
@@ -2647,10 +2661,10 @@ input {
 }
 .cart__product-summary {
   display: flex;
-  align-items: center;
   gap: 1.2rem;
 }
 .cart__product-summary h6 {
+  font-weight: 500;
   font-size: 1.2rem;
   line-height: 125%;
   transition: all 0.2s ease;
@@ -2746,7 +2760,7 @@ input {
 .checkout .container {
   max-width: 156rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   gap: 3rem;
 }
 @media only screen and (max-width: 1030px) {
@@ -2758,11 +2772,11 @@ input {
   }
 }
 .checkout__form {
-  width: 87.5rem;
+  width: 60.5rem;
   max-width: 100%;
 }
 .checkout__cart {
-  width: 59.2rem;
+  width: 68.2rem;
   max-width: 100%;
   display: flex;
   flex-direction: column;
@@ -2774,7 +2788,7 @@ input {
   gap: 4rem;
 }
 .checkout__cart .cart__product {
-  width: 51.4rem;
+  width: 100%;
   max-width: 100%;
   align-items: start;
 }
@@ -2821,17 +2835,17 @@ input {
   }
 }
 .form__delivery, .form__pay {
-  margin-top: 12rem;
+  margin-top: 6rem;
 }
 @media only screen and (max-width: 768px) {
   .form__delivery, .form__pay {
-    margin-top: 6rem;
+    margin-top: 4rem;
   }
 }
 .form input {
   width: 100%;
   padding: 1rem;
-  font-size: 3rem;
+  font-size: 2rem;
   border: none;
   border-bottom: 1px solid #909090;
   transition: all 0.2s ease;
@@ -2846,7 +2860,7 @@ input {
 }
 .form input::placeholder {
   color: #909090;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 @media only screen and (max-width: 768px) {
   .form input::placeholder {
@@ -2876,7 +2890,7 @@ input {
   max-width: 100%;
 }
 .form__pay label {
-  font-size: 3rem;
+  font-size: 2rem;
   flex-wrap: wrap;
 }
 @media only screen and (max-width: 768px) {
@@ -2887,13 +2901,14 @@ input {
 .form__pay label p {
   width: 100%;
   margin-top: 1.4rem;
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: #909090;
   padding-left: 2.8rem;
   line-height: normal;
 }
 @media only screen and (max-width: 768px) {
   .form__pay label p {
+    margin-top: 1px;
     font-size: 1.2rem;
   }
 }
@@ -2904,7 +2919,7 @@ input {
   margin-top: 2rem;
 }
 .form__bttn {
-  margin-top: 9.3rem;
+  margin-top: 5.3rem;
   width: 43.7rem;
   max-width: 100%;
 }

@@ -8,9 +8,6 @@
     top: 0rem;
     z-index: 99;
     transition: background 0.3s linear;
-    &-checkout {
-        top: 4rem;
-    }
     @include maxw($tablet) {
         background: $white;
         top: 0;

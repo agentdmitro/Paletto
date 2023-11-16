@@ -46,6 +46,9 @@
             .product__item:nth-child(4) {
                 grid-column: span 2;
                 grid-row: span 2;
+                .product__item-img {
+                    height: 100%;
+                }
                 img {
                     max-height: 100%;
                 }
