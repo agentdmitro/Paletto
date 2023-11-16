@@ -9,7 +9,7 @@
     z-index: 5;
     opacity: 0;
     pointer-events: none;
-    height: 0;
+    height: 100%;
     transition: all 0.2s ease;
     &__bg {
         position: fixed;
@@ -23,7 +23,6 @@
     &.active {
         pointer-events: all;
         opacity: 1;
-        height: 100%;
     }
     &.active &__wrap {
         transform: translate(0);

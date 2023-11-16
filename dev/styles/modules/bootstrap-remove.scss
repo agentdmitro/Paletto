@@ -53,3 +53,12 @@ a:focus {
 .pull-right {
     float: none !important;
 }
+
+.swiper-pagination-bullet-active {
+    background: inherit;
+}
+
+.swiper-pagination-bullet {
+    width: auto;
+    height: auto;
+}

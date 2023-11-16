@@ -53,6 +53,10 @@ body {
         overflow: hidden;
         height: 100vh;
     }
+    &.menu-popup-open {
+        overflow: hidden;
+        height: 100vh;
+    }
     &.search-open {
         height: 100vh;
         overflow: hidden;
@@ -62,9 +66,9 @@ body {
         height: 100vh;
         // overflow: hidden;
         .header {
-            top: 0rem;
             background: $white;
             position: fixed;
+            box-shadow: none;
         }
         .notif {
             opacity: 0;

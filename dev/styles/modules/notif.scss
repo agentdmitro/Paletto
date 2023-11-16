@@ -1,6 +1,7 @@
 @import '../core';
 
 .notif {
+    display: none;
     z-index: 4;
     &__product {
         padding: 1.65rem;

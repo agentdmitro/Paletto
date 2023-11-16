@@ -28,3 +28,9 @@
 .content ul li + li {
   margin-top: 1rem;
 }
+.content ul + h5 {
+  margin-top: 4rem;
+}
+.content ul + p {
+  margin-top: 2rem;
+}
