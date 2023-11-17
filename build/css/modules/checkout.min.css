@@ -147,6 +147,15 @@
     gap: 3.8rem;
   }
 }
+.form__input .nice-select {
+  display: flex;
+  align-items: center;
+  height: 5.2rem;
+  line-height: 5.2rem;
+}
+.form__input .nice-select .current {
+  font-size: 2rem;
+}
 .form__pay {
   width: 43.7rem;
   max-width: 100%;
